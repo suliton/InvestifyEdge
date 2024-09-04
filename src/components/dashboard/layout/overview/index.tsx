@@ -17,13 +17,13 @@ const Overview = () => {
                 </div>
                 <div className="w-[35%] flex items-center justify-end gap-[10px] max-[650px]:w-[100%] max-[650px]:justify-start">
                     <button
-                        onClick={() => navigate('/deposit')}
+                        onClick={() => navigate('/dashboard/deposit')}
                         className="w-[100px] h-[40px] border text-[13px] flex items-center rounded-[4px] justify-center gap-[5px] "
                     >
                         Deposit <IoCloudDownloadOutline />
                     </button>
                     <button
-                        onClick={() => navigate('/withdraw')}
+                        onClick={() => navigate('withdraw')}
                         className="w-[100px] h-[40px] bg-[#182536] text-white rounded-[4px] text-[13px] flex items-center justify-center gap-[5px]"
                     >
                         Withdraw <IoCloudUploadOutline />
@@ -75,6 +75,23 @@ const Overview = () => {
                     <p className="w-[95%] text-[14px] text-[#364a63]">Live market prices as seen on trading view</p>
                 </span>
                 <TradingViewWidget />
+            </div>
+            <div className="w-[95%] mt-[30px] mb-[20px] flex flex-col gap-[10px]">
+                <p className="text-[20px] text-[#364a63] text-bold">
+                    Invite members to InvestifyEdge and earn more
+                </p>
+                <p>
+                    Your unique link you can use to invite more members to join you on InvestifyEdge. Click the button below to copy.
+                </p>
+                <div className="w-full flex flex-col gap-2">
+                    <p>
+                        Affiliate Link
+                    </p>
+                    <span className="w-[100%] h-[50px] border border-[lightgrey] flex items-center p-2 ">
+                        <p>https://investifyedge.com/lil</p>
+                    </span>
+                </div>
+                <button className="w-[200px] bg-[#364a63] h-[40px] text-white rounded-[4px] ">Copy your affiliate link</button>
             </div>
         </div>
     )

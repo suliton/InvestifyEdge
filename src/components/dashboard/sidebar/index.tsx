@@ -14,7 +14,7 @@ const SideBar = () => {
                             <RiDashboardFill />
                             <p>Dashboard</p>
                         </span>
-                        <span className="flex items-center gap-2 w-[90%] text-[#6e82a5] cursor-pointer hover:text-white" onClick={() => navigate('/affilliate')}>
+                        <span className="flex items-center gap-2 w-[90%] text-[#6e82a5] cursor-pointer hover:text-white" onClick={() => navigate('/dashboard/affiliate')}>
                             <HiMiniUserGroup />
                             <p>Affilliate</p>
                         </span>
@@ -25,7 +25,7 @@ const SideBar = () => {
                             <RiDashboardFill />
                             <p>Deposits</p>
                         </span>
-                        <span className="flex items-center gap-2 w-[90%] text-[#6e82a5] cursor-pointer hover:text-white" onClick={() => navigate('/affilliate')}>
+                        <span className="flex items-center gap-2 w-[90%] text-[#6e82a5] cursor-pointer hover:text-white" onClick={() => navigate('/dashboard/affiliate')}>
                             <HiMiniUserGroup />
                             <p>Investment Plan</p>
                         </span>

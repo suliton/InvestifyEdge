@@ -16,10 +16,11 @@ const Deposits = () => {
                     Please kindly note that the accrued interest on each financial service differ.
                 </p>
                 <div className="w-[50%] h-[250px] rounded-[8px] flex flex-col bg-white justify-center gap-[20px] max-[650px]:w-[100%]">
-                    <button className="w-[180px] h-[50px] p-[10px] bg-[#264653] rounded-[8px] text-white ml-[50px]" onClick={()=> navigate('/deposit/real-estate')}>Real Estate Plans</button>
-                    <button className="w-[150px] h-[50px] p-[10px] bg-[#264653] rounded-[8px] text-white ml-[50px]" onClick={()=> navigate('/deposit/crypto')}>Crypto Plans</button>
+                    <button className="w-[180px] h-[50px] p-[10px] bg-[#264653] rounded-[8px] text-white ml-[50px]" onClick={()=> navigate('/dashboard/real-estate')}>Real Estate Plans</button>
+                    <button className="w-[150px] h-[50px] p-[10px] bg-[#264653] rounded-[8px] text-white ml-[50px]" onClick={()=> navigate('/dashboard/crypto')}>Crypto Plans</button>
                 </div>
             </div>
+            {/* <Outlet /> */}
         </div>
     )
 }

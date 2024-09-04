@@ -5,7 +5,7 @@ const RealEstate = () => {
     return (
         <div className="w-full flex items-center justify-center mt-[30px] mb-[30px] verflow-auto">
             <div className="w-[90%] flex flex-col gap-[20px]">
-                <span className="w-[100%] flex items-center cursor-pointer" onClick={() => navigate('/deposit')} >
+                <span className="w-[100%] flex items-center cursor-pointer" onClick={() => navigate('/dashboard')} >
                     <BsArrowLeftShort />
                     <p>Deposit</p>
                 </span>

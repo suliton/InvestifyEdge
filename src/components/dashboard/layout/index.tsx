@@ -2,7 +2,6 @@ import { useState } from "react"
 import { HiMenuAlt2 } from "react-icons/hi"
 import { ImUser } from "react-icons/im"
 import { Outlet } from "react-router-dom"
-import SideBar from "../sidebar"
 
 const Layout = () => {
     const [showSideBar, setShowSidebar] = useState<boolean>(false)
@@ -20,9 +19,6 @@ const Layout = () => {
             <div className="w-[100%] h-[90%] overflow-auto">
                 <Outlet />
             </div>
-            {
-                showSideBar && <SideBar/>
-            }
         </div>
     )
 }
