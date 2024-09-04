@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 const Purpose = () => {
     return (
-        <div className="w-full mt-[50px] flex items-center justify-center ">
+        <div className="w-full flex items-center justify-center ">
             <div className="w-[90%] flex justify-between">
                 <motion.div
                     className="flex flex-col w-[30%] font-bold"
@@ -18,14 +18,14 @@ const Purpose = () => {
                             initial={{ y: 100, opacity: 0 }}
                             whileInView={{ y: 0, opacity: 1 }}
                             transition={{ duration: 0.8 }}
-                            className="flex flex-col gap-[10px] items-center justify-center w-[300px] h-[400px] shadow-lg bg-white ">
+                            className="flex flex-col gap-[10px] items-center justify-center w-[320px] h-[400px] shadow-lg bg-white ">
                             <motion.div
                                 whileHover={{ scale: 1.02, boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.2)" }}
                                 className="w-full h-[50%]">
                                 <img src="./explore.jpg" alt="" className="w-[100%] h-[100%] object-fill" />
                             </motion.div>
                             <div className="p-[20px] gap-[10px] h-[50%] flex flex-col items-center justify-center">
-                                <p className="text-[20px] font-bold ">Explore With Us</p>
+                                <p className="text-[24px] font-bold ">Explore With Us</p>
                                 <p className="text-center text-[12px]">Seize the opportunity to grow your capital in the cryptocurrency market by copying the trades of top preforming traders in our investment programme</p>
                             </div>
                         </motion.div>
@@ -33,15 +33,15 @@ const Purpose = () => {
                             initial={{ y: 100, opacity: 0 }}
                             whileInView={{ y: 0, opacity: 1 }}
                             transition={{ duration: 0.8 }}
-                            className="flex flex-col gap-[10px] items-center justify-center w-[300px] h-[400px] shadow-lg bg-white ">
+                            className="flex flex-col gap-[10px] items-center justify-center w-[320px] h-[400px] shadow-lg bg-white ">
                             <motion.div
                                 whileHover={{ scale: 1.02, boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.2)" }}
                                 className="w-full h-[50%]">
                                 <img src="./frequency.jpg" alt="" className="w-[100%] h-[100%] object-fill" />
                             </motion.div>
-                            <div className="p-[20px] gap-[10px] h-[50%] flex flex-col items-center justify-center">
-                                <p className="text-[20px] font-bold ">Explore With Us</p>
-                                <p className="text-center text-[12px]">Seize the opportunity to grow your capital in the cryptocurrency market by copying the trades of top preforming traders in our investment programme</p>
+                            <div className=" w-[100%] p-[20px] gap-[10px] h-[50%] flex flex-col items-center justify-center">
+                                <p className="text-[24px] font-bold ">High Frequency Trading</p>
+                                <p className="text-center text-[12px]">Global institutions, leading hedge funds and industry innovators turn to theinvestifyglobe for bitcoin cryptocurrency trading advice and market-making services.</p>
                             </div>
                         </motion.div>
                     </div>
@@ -50,30 +50,30 @@ const Purpose = () => {
                             initial={{ y: 100, opacity: 0 }}
                             whileInView={{ y: 0, opacity: 1 }}
                             transition={{ duration: 0.8 }}
-                            className="flex flex-col gap-[10px] items-center justify-center w-[300px] h-[400px] shadow-lg bg-white ">
+                            className="flex flex-col gap-[10px] items-center justify-center w-[320px] h-[400px] shadow-lg bg-white ">
                             <motion.div
                                 whileHover={{ scale: 1.02, boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.2)" }}
                                 className="w-full h-[50%]">
                                 <img src="./bgimage.jpg" alt="" className="w-[100%] h-[100%] object-fill" />
                             </motion.div>
                             <div className="p-[20px] gap-[10px] h-[50%] flex flex-col items-center justify-center">
-                                <p className="text-[20px] font-bold ">Explore With Us</p>
-                                <p className="text-center text-[12px]">Seize the opportunity to grow your capital in the cryptocurrency market by copying the trades of top preforming traders in our investment programme</p>
+                                <p className="text-[24px] font-bold ">Investment Management</p>
+                                <p className="text-center text-[12px]">We deliver active bitcoin investment strategies across public and private markets and custom solutions to institutional and individual investors.</p>
                             </div>
                         </motion.div>
                         <motion.div
                             initial={{ y: 100, opacity: 0 }}
                             whileInView={{ y: 0, opacity: 1 }}
                             transition={{ duration: 0.8 }}
-                            className="flex flex-col gap-[10px] items-center justify-center w-[300px] h-[400px] shadow-lg bg-white ">
+                            className="flex flex-col gap-[10px] items-center justify-center w-[320px] h-[400px] shadow-lg bg-white ">
                             <motion.div
                                 whileHover={{ scale: 1.02, boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.2)" }}
                                 className="w-full h-[50%]">
                                 <img src="./wealth.jpg" alt="" className="w-[100%] h-[100%] object-fill" />
                             </motion.div>
                             <div className="p-[20px] gap-[10px] h-[50%] flex flex-col items-center justify-center">
-                                <p className="text-[20px] font-bold ">Explore With Us</p>
-                                <p className="text-center text-[12px]">Seize the opportunity to grow your capital in the cryptocurrency market by copying the trades of top preforming traders in our investment programme</p>
+                                <p className="text-[24px] font-bold ">Wealth Management</p>
+                                <p className="text-center text-[12px]">We help people, businesses and institutions build, preserve and manage wealth so they can pursue their financial goals.</p>
                             </div>
                         </motion.div>
                     </div>
