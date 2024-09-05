@@ -29,7 +29,7 @@ const HeroPage = () => {
         </div>
       </div>
 
-      <div className="w-full bg-white shadow-lg flex justify-center max-[650px]:flex-col max-[650px]:h-auto max-[650px]:p-[20px] overflow-hidden">
+      <div className="w-full h-[200px] bg-white shadow-lg flex justify-center max-[650px]:flex-col max-[650px]:h-auto max-[650px]:p-[20px] overflow-hidden">
         <div className="w-[90%] h-full flex justify-center items-center gap-[20px] max-[650px]:gap-[50px] max-[650px]:flex-col">
           <motion.div
             className="flex w-[35%] items-center gap-[20px] max-[650px]:w-full"

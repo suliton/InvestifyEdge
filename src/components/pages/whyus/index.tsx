@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const WhyChooseUs = () => {
     return (
-        <div className="w-full bg-[#EDF1FC] flex items-center justify-center flex-col h-[600px] max-[650px]:h-auto overflow-hidden ">
+        <div className="w-full bg-[#EDF1FC] flex items-center justify-center flex-col h-[600px] max-[650px]:h-auto overflow-hidden mt-[40px] ">
             <div className="w-[90%] flex items-center flex-col justify-center p-[20px] max-[650px]:w-[100%] ">
                 <p className="text-[14px] font-light text-[#264653]">Why Choose Us</p>
                 <p className="text-[50px] text-center font-bold text-[#264653] max-[650px]:text-[40px]">Smart Investing with Smart Ideas</p>

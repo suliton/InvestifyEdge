@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 const Purpose = () => {
     return (
-        <div className="w-full flex items-center justify-center overflow-hidden ">
+        <div className="w-full flex items-center justify-center overflow-hidden mt-[40px] ">
             <div className="w-[90%] flex justify-between max-[650px]:flex-col">
                 <motion.div
                     className="flex flex-col w-[30%] font-bold max-[650px]:w-[100%]"
