@@ -8,7 +8,7 @@ const HeroPage = () => {
     <>
       <div className="w-full h-[100vh] bg-[url('./bgimage.jpg')] max-[650px]:w-[100%] bg-cover bg-center bg-no-repeat relative flex justify-center">
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black opacity-20"></div>
+        <div className="absolute inset-0 bg-black opacity-20 -z-1"></div>
         <div className="w-full h-full relative z-10 max-[650px]:w-[100%]">
           <Header />
           <div className="w-[100%] h-[90vh] flex items-center flex-col justify-center">
