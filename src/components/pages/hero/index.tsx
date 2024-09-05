@@ -6,10 +6,10 @@ import 'animate.css';
 const HeroPage = () => {
   return (
     <>
-      <div className="w-full h-[100vh] bg-[url('./bgimage.jpg')] max-[650px]:w-[100%] bg-cover bg-center bg-no-repeat relative flex justify-center">
+      <div className="w-full h-[100vh] bg-[url('./bgimage.jpg')] max-[650px]:w-[100%] z- bg-cover bg-center bg-no-repeat relative flex justify-center">
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black opacity-20 -z-1"></div>
-        <div className="w-full h-full relative z-10 max-[650px]:w-[100%]">
+        <div className="absolute inset-0 bg-black opacity-20 "></div>
+        <div className="w-full h-full relative max-[650px]:w-[100%]">
           <Header />
           <div className="w-[100%] h-[90vh] flex items-center flex-col justify-center">
             <h1 className="text-[50px] w-[90%] text-white font-bold max-w-[1000px] text-center
