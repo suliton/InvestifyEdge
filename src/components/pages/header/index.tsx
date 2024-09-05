@@ -1,12 +1,12 @@
 
 const Header = () => {
   return (
-    <div className="w-[100%] h-[10vh] bg-transparent flex justify-center">
+    <div className="w-[100%] h-[10vh] bg-transparent flex justify-center ">
         <div className="w-[90%] h-full flex">
           <span className="w-[30%] flex items-center">
           <p>InvestifyEdge</p>
           </span>
-          <span className=" w-[70%] flex gap-[70px] items-center text-white text-[14px] ">
+          <span className=" w-[70%] flex gap-[70px] items-center text-white text-[14px] max-[650px]:hidden">
             <p className="cursor-pointer hover:text-[#364a63]">Home</p>
             <p className="cursor-pointer hover:text-[#364a63]">Company</p>
             <p className="cursor-pointer hover:text-[#364a63]">Services</p>

@@ -1,24 +1,24 @@
 import { motion } from "framer-motion";
 const Purpose = () => {
     return (
-        <div className="w-full flex items-center justify-center ">
-            <div className="w-[90%] flex justify-between">
+        <div className="w-full flex items-center justify-center overflow-hidden ">
+            <div className="w-[90%] flex justify-between max-[650px]:flex-col">
                 <motion.div
-                    className="flex flex-col w-[30%] font-bold"
+                    className="flex flex-col w-[30%] font-bold max-[650px]:w-[100%]"
                     initial={{ x: -100, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
                     transition={{ duration: 0.8 }}
                 >
                     <p className="text-[14px] font-light">Our Purpose</p>
-                    <p className="text-[50px]">Our common Purpose is Creating opportunities to rise.</p>
+                    <p className="text-[50px] max-[650px]:text-[40px] ">Our common Purpose is Creating opportunities to rise.</p>
                 </motion.div>
-                <div className="flex w-[60%]">
-                    <div className="flex flex-col w-[50%] gap-[20px]">
+                <div className="flex w-[60%] max-[650px]:flex-col max-[650px]:w-[100%]">
+                    <div className="flex flex-col w-[50%] gap-[20px] max-[650px]:w-[100%]">
                         <motion.div
                             initial={{ y: 100, opacity: 0 }}
                             whileInView={{ y: 0, opacity: 1 }}
                             transition={{ duration: 0.8 }}
-                            className="flex flex-col gap-[10px] items-center justify-center w-[320px] h-[400px] shadow-lg bg-white ">
+                            className="flex flex-col gap-[10px] items-center justify-center w-[320px] h-[400px] shadow-lg bg-white max-[650px]:w-[100%] ">
                             <motion.div
                                 whileHover={{ scale: 1.02, boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.2)" }}
                                 className="w-full h-[50%]">
@@ -33,7 +33,7 @@ const Purpose = () => {
                             initial={{ y: 100, opacity: 0 }}
                             whileInView={{ y: 0, opacity: 1 }}
                             transition={{ duration: 0.8 }}
-                            className="flex flex-col gap-[10px] items-center justify-center w-[320px] h-[400px] shadow-lg bg-white ">
+                            className="flex flex-col gap-[10px] items-center justify-center w-[320px] h-[400px] shadow-lg bg-white max-[650px]:w-[100%] ">
                             <motion.div
                                 whileHover={{ scale: 1.02, boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.2)" }}
                                 className="w-full h-[50%]">
@@ -45,12 +45,12 @@ const Purpose = () => {
                             </div>
                         </motion.div>
                     </div>
-                    <div className="flex flex-col w-[50%] gap-[20px] mt-[40px]">
+                    <div className="flex flex-col w-[50%] gap-[20px] mt-[40px] max-[650px]:w-[100%]">
                         <motion.div
                             initial={{ y: 100, opacity: 0 }}
                             whileInView={{ y: 0, opacity: 1 }}
                             transition={{ duration: 0.8 }}
-                            className="flex flex-col gap-[10px] items-center justify-center w-[320px] h-[400px] shadow-lg bg-white ">
+                            className="flex flex-col gap-[10px] items-center justify-center w-[320px] h-[400px] shadow-lg bg-white  max-[650px]:w-[100%]">
                             <motion.div
                                 whileHover={{ scale: 1.02, boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.2)" }}
                                 className="w-full h-[50%]">
@@ -65,7 +65,7 @@ const Purpose = () => {
                             initial={{ y: 100, opacity: 0 }}
                             whileInView={{ y: 0, opacity: 1 }}
                             transition={{ duration: 0.8 }}
-                            className="flex flex-col gap-[10px] items-center justify-center w-[320px] h-[400px] shadow-lg bg-white ">
+                            className="flex flex-col gap-[10px] items-center justify-center w-[320px] h-[400px] shadow-lg bg-white  max-[650px]:w-[100%]">
                             <motion.div
                                 whileHover={{ scale: 1.02, boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.2)" }}
                                 className="w-full h-[50%]">

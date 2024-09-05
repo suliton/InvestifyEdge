@@ -4,7 +4,7 @@ import WhyChooseUs from './whyus'
 
 const Entry = () => {
   return (
-    <div className='w-full flex flex-col gap-[50px]'>
+    <div className='w-full flex flex-col gap-[50px] '>
         <HeroPage/>
         <Purpose/>
         <WhyChooseUs/>

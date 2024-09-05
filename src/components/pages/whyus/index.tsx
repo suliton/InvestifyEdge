@@ -3,19 +3,19 @@ import { motion } from "framer-motion";
 
 const WhyChooseUs = () => {
     return (
-        <div className="w-full bg-[#EDF1FC] flex items-center justify-center flex-col h-[600px] ">
-            <div className="w-[90%] flex items-center flex-col justify-center p-[20px] ">
+        <div className="w-full bg-[#EDF1FC] flex items-center justify-center flex-col h-[600px] max-[650px]:h-auto overflow-hidden ">
+            <div className="w-[90%] flex items-center flex-col justify-center p-[20px] max-[650px]:w-[100%] ">
                 <p className="text-[14px] font-light text-[#264653]">Why Choose Us</p>
-                <p className="text-[50px] font-bold text-[#264653]">Smart Investing with Smart Ideas</p>
+                <p className="text-[50px] text-center font-bold text-[#264653] max-[650px]:text-[40px]">Smart Investing with Smart Ideas</p>
                 <p className="text-[15px] font-light text-center text-[#264653]">
                     investifyEdge have a unique approach to income generation. We build <br />
                     innovative wealth creation products.
                 </p>
             </div>
-            <div className="w-[90%] flex items-center justify-around p-[20px]">
+            <div className="w-[90%] flex max-[650px]:gap-[10px] max-[650px]:flex-col items-center justify-around p-[20px]">
                 {/* First two divs coming from the left */}
                 <motion.div
-                    className="w-[20%] flex flex-col items-center gap-2"
+                    className="w-[20%] flex flex-col items-center gap-2 max-[650px]:w-[100%]"
                     initial={{ x: -100, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
                     transition={{ duration: 0.8 }}
@@ -30,7 +30,7 @@ const WhyChooseUs = () => {
                 </motion.div>
 
                 <motion.div
-                    className="w-[20%] flex flex-col items-center gap-2"
+                    className="w-[20%] flex flex-col items-center gap-2 max-[650px]:w-[100%]"
                     initial={{ x: -100, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
                     transition={{ duration: 0.8 }}
@@ -46,7 +46,7 @@ const WhyChooseUs = () => {
 
                 {/* Next two divs coming from the right */}
                 <motion.div
-                    className="w-[20%] flex flex-col items-center gap-2"
+                    className="w-[20%] flex flex-col items-center gap-2 max-[650px]:w-[100%]"
                     initial={{ x: 100, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
                     transition={{ duration: 0.8 }}
@@ -61,7 +61,7 @@ const WhyChooseUs = () => {
                 </motion.div>
 
                 <motion.div
-                    className="w-[20%] flex flex-col items-center gap-2"
+                    className="w-[20%] flex flex-col items-center gap-2 max-[650px]:w-[100%]"
                     initial={{ x: 100, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
                     transition={{ duration: 0.8 }}
