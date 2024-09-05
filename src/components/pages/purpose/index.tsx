@@ -1,4 +1,9 @@
 import { motion } from "framer-motion";
+import bgImage from '../../../assets/bgimage.jpg'
+import frequncy from '../../../assets/frequency.jpg'
+import explore from '../../../assets/explore.jpg'
+import wealth from '../../../assets/wealth.jpg'
+
 const Purpose = () => {
     return (
         <div className="w-full flex items-center justify-center overflow-hidden mt-[40px] ">
@@ -22,7 +27,7 @@ const Purpose = () => {
                             <motion.div
                                 whileHover={{ scale: 1.02, boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.2)" }}
                                 className="w-full h-[50%]">
-                                <img src="./explore.jpg" alt="" className="w-[100%] h-[100%] object-fill" />
+                                <img src={explore}  alt="" className="w-[100%] h-[100%] object-fill" />
                             </motion.div>
                             <div className="p-[20px] gap-[10px] h-[50%] flex flex-col items-center justify-center">
                                 <p className="text-[24px] font-bold ">Explore With Us</p>
@@ -37,7 +42,7 @@ const Purpose = () => {
                             <motion.div
                                 whileHover={{ scale: 1.02, boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.2)" }}
                                 className="w-full h-[50%]">
-                                <img src="./frequency.jpg" alt="" className="w-[100%] h-[100%] object-fill" />
+                                <img src={frequncy}  alt="" className="w-[100%] h-[100%] object-fill" />
                             </motion.div>
                             <div className=" w-[100%] p-[20px] gap-[10px] h-[50%] flex flex-col items-center justify-center">
                                 <p className="text-[24px] font-bold ">High Frequency Trading</p>
@@ -54,7 +59,7 @@ const Purpose = () => {
                             <motion.div
                                 whileHover={{ scale: 1.02, boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.2)" }}
                                 className="w-full h-[50%]">
-                                <img src="./bgimage.jpg" alt="" className="w-[100%] h-[100%] object-fill" />
+                                <img src={bgImage} alt="" className="w-[100%] h-[100%] object-fill" />
                             </motion.div>
                             <div className="p-[20px] gap-[10px] h-[50%] flex flex-col items-center justify-center">
                                 <p className="text-[24px] font-bold ">Investment Management</p>
@@ -69,7 +74,7 @@ const Purpose = () => {
                             <motion.div
                                 whileHover={{ scale: 1.02, boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.2)" }}
                                 className="w-full h-[50%]">
-                                <img src="./wealth.jpg" alt="" className="w-[100%] h-[100%] object-fill" />
+                                <img src={wealth} alt="" className="w-[100%] h-[100%] object-fill" />
                             </motion.div>
                             <div className="p-[20px] gap-[10px] h-[50%] flex flex-col items-center justify-center">
                                 <p className="text-[24px] font-bold ">Wealth Management</p>

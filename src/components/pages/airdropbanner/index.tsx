@@ -1,8 +1,8 @@
-
+import workSpace from '../../../assets/workplace.jpg'
 const AirDropBanner = () => {
     return (
         <div className="w-full h-[300px]">
-            <div className="w-full h-full bg-[url('./workplace.jpg')] bg-cover bg-center bg-no-repeat relative box-border flex items-center justify-center flex-col">
+            <div className="w-full h-full bg-cover bg-center bg-no-repeat relative box-border flex items-center justify-center flex-col "style={{ backgroundImage: `url(${workSpace})` }}>
                 <div className="absolute inset-0 bg-black  opacity-40"></div>
                 <div className="w-[90%] z-20 flex items-center justify-center flex-col gap-[20px]">
                     <p className="text-white text-[20px] font-semibold max-[650px]:text-[15px]">SERVER AIRDROP ACTIVE</p>
