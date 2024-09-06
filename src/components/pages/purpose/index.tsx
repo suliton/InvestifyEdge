@@ -15,7 +15,7 @@ const Purpose = () => {
                     transition={{ duration: 0.8 }}
                 >
                     <p className="text-[14px] font-light">Our Purpose</p>
-                    <p className="text-[50px] max-[650px]:text-[40px] ">Our common Purpose is Creating opportunities to rise.</p>
+                    <p className="text-[50px] max-[650px]:text-[30px] ">Our common Purpose is Creating opportunities to rise.</p>
                 </motion.div>
                 <div className="flex w-[60%] max-[650px]:flex-col max-[650px]:w-[100%]">
                     <div className="flex flex-col w-[50%] gap-[20px] max-[650px]:w-[100%]">
@@ -30,7 +30,7 @@ const Purpose = () => {
                                 <img src={explore}  alt="" className="w-[100%] h-[100%] object-fill" />
                             </motion.div>
                             <div className="p-[20px] gap-[10px] h-[50%] flex flex-col items-center justify-center">
-                                <p className="text-[24px] font-bold ">Explore With Us</p>
+                                <p className="text-[24px] font-bold max-[650px]:text-[20px]">Explore With Us</p>
                                 <p className="text-center text-[12px]">Seize the opportunity to grow your capital in the cryptocurrency market by copying the trades of top preforming traders in our investment programme</p>
                             </div>
                         </motion.div>
@@ -45,7 +45,7 @@ const Purpose = () => {
                                 <img src={frequncy}  alt="" className="w-[100%] h-[100%] object-fill" />
                             </motion.div>
                             <div className=" w-[100%] p-[20px] gap-[10px] h-[50%] flex flex-col items-center justify-center">
-                                <p className="text-[24px] font-bold ">High Frequency Trading</p>
+                                <p className="text-[24px] font-bold max-[650px]:text-[20px]">High Frequency Trading</p>
                                 <p className="text-center text-[12px]">Global institutions, leading hedge funds and industry innovators turn to theinvestifyglobe for bitcoin cryptocurrency trading advice and market-making services.</p>
                             </div>
                         </motion.div>
@@ -62,7 +62,7 @@ const Purpose = () => {
                                 <img src={bgImage} alt="" className="w-[100%] h-[100%] object-fill" />
                             </motion.div>
                             <div className="p-[20px] gap-[10px] h-[50%] flex flex-col items-center justify-center">
-                                <p className="text-[24px] font-bold ">Investment Management</p>
+                                <p className="text-[24px] font-bold max-[650px]:text-[20px] ">Investment Management</p>
                                 <p className="text-center text-[12px]">We deliver active bitcoin investment strategies across public and private markets and custom solutions to institutional and individual investors.</p>
                             </div>
                         </motion.div>
@@ -77,7 +77,7 @@ const Purpose = () => {
                                 <img src={wealth} alt="" className="w-[100%] h-[100%] object-fill" />
                             </motion.div>
                             <div className="p-[20px] gap-[10px] h-[50%] flex flex-col items-center justify-center">
-                                <p className="text-[24px] font-bold ">Wealth Management</p>
+                                <p className="text-[24px] font-bold max-[650px]:text-[20px]">Wealth Management</p>
                                 <p className="text-center text-[12px]">We help people, businesses and institutions build, preserve and manage wealth so they can pursue their financial goals.</p>
                             </div>
                         </motion.div>
