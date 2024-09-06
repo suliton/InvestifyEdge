@@ -1,6 +1,8 @@
 import AirDropBanner from './airdropbanner'
+import ForYou from './foryou'
 import HeroPage from './hero'
 import Purpose from './purpose'
+import TestimonialSlider from './Testimonial'
 import WhyChooseUs from './whyus'
 
 const Entry = () => {
@@ -10,6 +12,8 @@ const Entry = () => {
         <Purpose/>
         <WhyChooseUs/>
         <AirDropBanner/>
+        <TestimonialSlider/>
+        <ForYou/>
     </div>
   )
 }

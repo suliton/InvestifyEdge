@@ -18,11 +18,11 @@ const AirDropBanner = () => {
                 </div>
             </motion.div>
             <div className='w-full flex items-center justify-center'>
-                <div className='w-[60%] p-[40px] bg-white shadow-lg flex flex-col items-center justify-center gap-3 '>
+                <div className='w-[60%] p-[40px] bg-white shadow-lg flex flex-col items-center justify-center gap-3 max-[650px]:w-full '>
                     <p className="text-[14px] font-light">Overview</p>
-                    <p className="text-[50px] max-[650px]:text-[40px]">Start a Good Plan</p>
-                    <p className='text-[14px]'>Think about what you want, make the best out of it by starting with us today. we are always available to make the right choice for you.</p>
-                    <p className='text-[14px]'>Our experts are the best in everything. They are well trained in forex, crypto-currency trading and also in giving investment advices.</p>
+                    <p className="text-[50px] max-[650px]:text-[30px]">Start a Good Plan</p>
+                    <p className='text-[14px] max-[650px]:text-center'>Think about what you want, make the best out of it by starting with us today. we are always available to make the right choice for you.</p>
+                    <p className='text-[14px] max-[650px]:text-center'>Our experts are the best in everything. They are well trained in forex, crypto-currency trading and also in giving investment advices.</p>
                 </div>
             </div>
         </div>
