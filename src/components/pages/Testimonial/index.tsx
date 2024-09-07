@@ -25,9 +25,13 @@ const testimonials: Testimonial[] = [
 
 const TestimonialSlider: React.FC = () => {
     return (
-        <div className="relative w-full h-[500px] flex items-center justify-center bg-cover bg-center bg-no-repeat mt-[40px]" style={{ backgroundImage: `url(${workSpace})` }}>
-            <div className="absolute inset-0 bg-black  opacity-40"></div>
-            <div className='w-[70%] h-[100%] flex items-center justify-center max-[650px]:w-full"'>
+        <div className="relative w-full h-[550px] flex items-center justify-center bg-cover bg-center bg-no-repeat mt-[40px]" style={{ backgroundImage: `url(${workSpace})` }}>
+            <div className="absolute inset-0 bg-[#0000007b]"></div>
+            <div className='w-[70%] h-[100%] flex flex-col items-center justify-center max-[650px]:w-full'>
+                <span className='py-[40px] z-[2]'>
+                    <p className='text-[12px] text-white text-center'>Testimonial</p>
+                    <p className='text-[50px] text-white font-bold'>What Clients Say</p>
+                </span>
                 <Swiper
                     modules={[Navigation, Pagination, Autoplay]}
                     spaceBetween={40}
@@ -50,7 +54,7 @@ const TestimonialSlider: React.FC = () => {
                     className="swiper-container w-[100%] max-[650px]:w-full"
                 >
                     {testimonials.map((testimonial, index) => (
-                        <SwiperSlide key={index} className='w-[100%]'> 
+                        <SwiperSlide key={index} className='w-[100%]'>
                             <div className="shadow-lg w-[300px] max-[650px]:w-full">
                                 <div className='p-6 bg-white h-[250px] w-full flex items-center max-[650px]:w-full'>
                                     <p className="text-gray-600">{testimonial.feedback}</p>

@@ -9,10 +9,10 @@ const AirDropBanner = () => {
                 transition={{ duration: 0.8 }}
                 className="w-full h-[300px]">
                 <div className="w-full h-full bg-cover bg-center bg-no-repeat relative box-border flex items-center justify-center flex-col " style={{ backgroundImage: `url(${workSpace})` }}>
-                    {/* <div className="absolute inset-0 bg-black  opacity-20"></div> */}
-                    <div className="w-[90%] flex items-center justify-center flex-col gap-[20px]">
-                        <p className="text-black text-[20px] font-semibold max-[650px]:text-[15px]">SERVER AIRDROP ACTIVE</p>
-                        <p className="text-[40px] text-black max-[650px]:text-[25px] text-center">Register now to claim your Airdrops. Offer Ends Soon</p>
+                    <div className="absolute inset-0 bg-[#0000007b] "></div>
+                    <div className="w-[90%] z-[2] flex items-center justify-center flex-col gap-[20px]">
+                        <p className="text-white text-[20px] font-semibold max-[650px]:text-[15px]">SERVER AIRDROP ACTIVE</p>
+                        <p className="text-[40px] text-white max-[650px]:text-[25px] text-center">Register now to claim your Airdrops. Offer Ends Soon</p>
                         <button className="p-[10px] w-[200px] text-white bg-[#E93C05] border-none">Claim Airdrops</button>
                     </div>
                 </div>
