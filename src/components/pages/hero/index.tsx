@@ -6,9 +6,8 @@ import bgImage from '../../../assets/bgimage.jpg'
 const HeroPage = () => {
   return (
     <>
-      <div className="w-full h-[100vh] max-[650px]:w-[100%] z- bg-cover bg-center bg-no-repeat relative flex justify-center " style={{ backgroundImage: `url(${bgImage})` }}>
+      <div className="w-full h-[100vh] max-[650px]:w-[100%]  bg-cover bg-center bg-no-repeat relative flex justify-center " style={{ backgroundImage: `url(${bgImage})` }}>
         {/* Overlay */}
-        {/* <div className="absolute inset-0 bg-black opacity-20 "></div> */}
         <div className="w-full h-full relative max-[650px]:w-[100%] bg-[#0000007a] z-10">
           <Header />
           <div className="w-[100%] h-[90vh] flex items-center flex-col justify-center">
@@ -28,7 +27,6 @@ const HeroPage = () => {
           </div>
         </div>
       </div>
-
       <div className="w-full h-[200px] bg-white shadow-lg flex justify-center max-[650px]:flex-col max-[650px]:h-auto max-[650px]:p-[20px] overflow-hidden">
         <div className="w-[90%] h-full flex justify-center items-center gap-[20px] max-[650px]:gap-[50px] max-[650px]:flex-col">
           <motion.div
