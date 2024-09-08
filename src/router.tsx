@@ -10,11 +10,53 @@ import Affliate from "./components/dashboard/layout/affliate";
 import Entry from "./components/pages";
 import Login from "./components/auth/admin/Login";
 import Signup from "./components/auth/admin/Signup";
-
+import CareerSection from "./components/pages/career";
+import Layout from "./components/pages/Layout";
+import Company from "./components/pages/company";
+import Contact from "./components/pages/contact";
 const router = createHashRouter([
     {
         path: '/',
-        element: <Entry />,
+        element: (
+            <Layout>
+                <Entry />
+            </Layout>
+        ),
+    },
+    {
+        path: '/career',
+        element: (
+            <Layout>
+                <CareerSection />
+            </Layout>
+        ),
+    },
+    {
+        path: '/company',
+        element: (
+            <Layout>
+                <Company />
+            </Layout>
+        ),
+    },
+    {
+        path: '/contact',
+        element: (
+            <Layout>
+                <Contact />
+                <section className=" w-full mt-12">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.535261295702!2d-2.5510621839466997!3d51.44928762235756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48718c0da0e5a9a3%3A0x6b44f7d58ae4050b!2sHanham%2C%20Bristol%20BS15%2C%20UK!5e0!3m2!1sen!2sus!4v1694210734851!5m2!1sen!2sus"
+                    width="100%"
+                    height="450"
+                    allowFullScreen={true}
+                    loading="lazy"
+                    className="border-0 rounded-lg"
+                    title="Google Map"
+                ></iframe>
+            </section>
+            </Layout>
+        ),
     },
     {
         path: '/login',

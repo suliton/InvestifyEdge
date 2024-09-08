@@ -1,5 +1,4 @@
 import { FaChartPie, FaMoneyBill, FaUser } from "react-icons/fa";
-import Header from "../header";
 import { motion } from "framer-motion";
 import 'animate.css';
 import bgImage from '../../../assets/bgimage.jpg'
@@ -7,9 +6,7 @@ const HeroPage = () => {
   return (
     <>
       <div className="w-full h-[100vh] max-[650px]:w-[100%]  bg-cover bg-center bg-no-repeat relative flex justify-center " style={{ backgroundImage: `url(${bgImage})` }}>
-        {/* Overlay */}
         <div className="w-full h-full relative max-[650px]:w-[100%] bg-[#0000007a] z-10">
-          <Header />
           <div className="w-[100%] h-[90vh] flex items-center flex-col justify-center">
             <h1 className="text-[50px] w-[90%] text-white font-bold max-w-[1000px] text-center
               max-[650px]:text-[40px]">

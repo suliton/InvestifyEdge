@@ -1,27 +1,22 @@
-import AirDropBanner from './airdropbanner'
-import Footer from './footer'
-import ForYou from './foryou'
-// import Header from './header'
-import HeroPage from './hero'
-import NeedHelp from './needhelp'
-import Purpose from './purpose'
-import TestimonialSlider from './Testimonial'
-import WhyChooseUs from './whyus'
+import AirDropBanner from './airdropbanner';
+import ForYou from './foryou';
+import HeroPage from './hero';
+import Purpose from './purpose';
+import TestimonialSlider from './Testimonial';
+import WhyChooseUs from './whyus';
+import Layout from './Layout';
 
 const Entry = () => {
   return (
-    <div className='w-full flex flex-col '>
-      {/* <Header /> */}
+    <Layout>
       <HeroPage />
       <Purpose />
       <WhyChooseUs />
       <AirDropBanner />
       <TestimonialSlider />
       <ForYou />
-      <NeedHelp />
-      <Footer/>
-    </div>
-  )
-}
+    </Layout>
+  );
+};
 
-export default Entry
+export default Entry;
