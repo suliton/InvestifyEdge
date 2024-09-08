@@ -1,6 +1,8 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Footer: React.FC = () => {
+    const navigate = useNavigate()
     return (
         <footer className="bg-[#111D29] text-white py-20 w-[100%] flex items-center justify-center">
             <div className='w-[90%]'>
@@ -18,12 +20,12 @@ const Footer: React.FC = () => {
                     <div>
                         <h4 className="font-bold mb-2">Company</h4>
                         <ul className='flex flex-col gap-[15px] text-[14px]'>
-                            <li><a href="#" className="hover:text-gray-400">Home</a></li>
-                            <li><a href="#" className="hover:text-gray-400">About Us</a></li>
-                            <li><a href="#" className="hover:text-gray-400">Career</a></li>
-                            <li><a href="#" className="hover:text-gray-400">Client Portal</a></li>
-                            <li><a href="#" className="hover:text-gray-400">Start Membership</a></li>
-                            <li><a href="#" className="hover:text-gray-400">Contact Us</a></li>
+                            <li><a href="#" className="hover:text-gray-400" onClick={() => navigate('/')}>Home</a></li>
+                            <li><a href="#" className="hover:text-gray-400" onClick={() => navigate('/company')}>About Us</a></li>
+                            <li><a href="#" className="hover:text-gray-400" onClick={() => navigate('/career')}>Career</a></li>
+                            <li><a href="#" className="hover:text-gray-400" onClick={() => navigate('/login')}>Client Portal</a></li>
+                            <li><a href="#" className="hover:text-gray-400" onClick={() => navigate('/signup')}>Start Membership</a></li>
+                            <li><a href="#" className="hover:text-gray-400" onClick={() => navigate('/contact')}>Contact Us</a></li>
                         </ul>
                     </div>
 

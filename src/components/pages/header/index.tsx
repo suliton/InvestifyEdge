@@ -91,8 +91,8 @@ const Header = () => {
       {/* Sidebar */}
       <div className={`fixed top-0 left-0 h-full bg-[#111D29] w-[250px] z-50 transform transition-transform duration-300 ${showSideBar ? 'translate-x-0' : '-translate-x-full'}`}>
         <div className="flex flex-col text-white p-4">
-          <p className="mb-4 cursor-pointer hover:text-[#364a63]">Home</p>
-          <p className="mb-4 cursor-pointer hover:text-[#364a63]">Company</p>
+          <p className="mb-4 cursor-pointer hover:text-[#364a63]" onClick={() => navigate('/')}>Home</p>
+          <p className="mb-4 cursor-pointer hover:text-[#364a63]" onClick={() => navigate('/company')}>Company</p>
 
           {/* Sidebar Services with dropdown */}
           <div className="mb-4 cursor-pointer hover:text-[#364a63]" onClick={toggleSidebarService}>
@@ -113,8 +113,8 @@ const Header = () => {
             )}
           </div>
 
-          <p className="mb-4 cursor-pointer hover:text-[#364a63]">Career</p>
-          <p className="mb-4 cursor-pointer hover:text-[#364a63]">Contact</p>
+          <p className="mb-4 cursor-pointer hover:text-[#364a63]" onClick={() => navigate('/career')}>Career</p>
+          <p className="mb-4 cursor-pointer hover:text-[#364a63]" onClick={() => navigate('/contact')}>Contact</p>
           <button className="border h-[40px] w-[120px] border-[#364a63] hover:bg-[#364a63] hover:text-white mt-4">
             Login
           </button>
