@@ -14,6 +14,9 @@ import Company from "./components/pages/company";
 import Contact from "./components/pages/contact";
 import Login from "./components/auth/user/login";
 import CreateAccount from "./components/auth/user/signup";
+import ForgotPassword from "./components/auth/user/forgotPassword";
+import ResetPassword from "./components/auth/user/resetPassword";
+import Verify from "./components/auth/user/verify";
 const router = createHashRouter([
     {
         path: '/',
@@ -64,6 +67,18 @@ const router = createHashRouter([
     {
         path: '/signup',
         element: <CreateAccount />,
+    },
+    {
+        path: '/forgot-password',
+        element: <ForgotPassword />,
+    },
+    {
+        path: '/reset-password/:id',
+        element: <ResetPassword />,
+    },
+    {
+        path: '/verify',
+        element: <Verify />,
     },
     {
         path: 'dashboard',

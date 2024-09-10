@@ -1,34 +1,91 @@
-import { useNavigate } from "react-router-dom"
+const { VITE_TOKEN_CLIENT } = import.meta.env;
+import { useState } from "react";
+import toast from "react-hot-toast";
+import { useMutation } from "react-query";
+import { useNavigate } from "react-router-dom";
+import { userLogin } from "../../../api/mutation";
+import { IErrorResponse } from "../../../interface";
 
 const Login = () => {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+
+    // State variables for form inputs
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [rememberMe, setRememberMe] = useState(false);
+
+    // Mutation to handle login
+    const { mutate, isLoading } = useMutation(userLogin, {
+        onSuccess: async (data: any) => {
+            toast.success(data?.data?.ststus);
+            navigate('/dashboard');
+            localStorage.setItem(VITE_TOKEN_CLIENT, data?.data?.data?.token);
+        },
+        onError: (err: IErrorResponse) => {
+            toast.error(err.response?.data?.message || "Login failed");
+        }
+    });
+
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        const userData = {
+            email,
+            password,
+            rememberMe,
+        };
+        mutate(userData);
+    };
+
     return (
         <div className="w-full h-[100vh] flex items-center justify-center bg-[#364a63]">
-            <div className="w-[30%] h-[60vh] bg-white flex justify-center items-center flex-col">
-                <span>
-                    <p className="font-semibold text-[20px]">Welcome back to InvestifyEdge</p>
-                </span>
-                <form className="w-full flex flex-col gap-[20px] p-[20px] ">
-                    <span className="w-[100%] flex flex-col gap-[10px]">
-                        <label></label>
-                        <input type="text" placeholder="Email" className="w-[100%] h-[50px] p-[10px] border border-[lightgrey] rounded-[4px] outline-none" />
-                    </span>
-                    <span>
-                        <label></label>
-                        <input type="text" placeholder="Password" className="w-[100%] h-[50px] p-[10px] border border-[lightgrey] rounded-[4px] outline-none" />
-                    </span>
-                    <span className="w-[100%] flex flex-col gap-[10px]">
-                        <button className="w-[100%] h-[50px] p-[10px] bg-[#364a63] text-white rounded-[4px]">Login</button>
-                    </span>
+            <div className="w-[30%] h-[60vh] bg-white flex justify-center items-center flex-col max-[650px]:w-full p-5 shadow-lg">
+                <h2 className="font-semibold text-[20px] mb-4">Welcome back to InvestifyEdge</h2>
+                <form onSubmit={handleSubmit} className="w-full flex flex-col gap-4">
+                    <div className="flex flex-col gap-2">
+                        <label>Email</label>
+                        <input
+                            type="email"
+                            placeholder="Email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            className="w-full h-[50px] p-3 border border-gray-300 rounded outline-none"
+                            required
+                        />
+                    </div>
+                    <div className="flex flex-col gap-2">
+                        <label>Password</label>
+                        <input
+                            type="password"
+                            placeholder="Password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            className="w-full h-[50px] p-3 border border-gray-300 rounded outline-none"
+                            required
+                        />
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <input
+                            type="checkbox"
+                            checked={rememberMe}
+                            onChange={(e) => setRememberMe(e.target.checked)}
+                        />
+                        <label>Remember me</label>
+                    </div>
+                    <button
+                        type="submit"
+                        disabled={isLoading}
+                        className="w-full h-[50px] bg-[#364a63] text-white rounded flex items-center justify-center"
+                    >
+                        {isLoading ? 'Logging in...' : 'Login'}
+                    </button>
                 </form>
-                <span className="w-full flex gap-1 items-center justify-center">
-                    <p>Don't have an account?</p>
-                    <p className="text-[#364a63] cursor-pointer text-[14px]" onClick={()=> navigate('/signup')}>Create Account</p>
-                </span>
-                <p className="text-[12px] cursor-pointer hover:text-[red] ">Forgot Password</p>
+                <div className="mt-4 text-center">
+                    <p>Don't have an account? <span className="text-[#364a63] cursor-pointer" onClick={() => navigate('/signup')}>Create Account</span></p>
+                    <p className="text-[12px] mt-2 cursor-pointer hover:text-red-500" onClick={() => navigate('/forgot-password')}>Forgot Password</p>
+                </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Login
+export default Login;
