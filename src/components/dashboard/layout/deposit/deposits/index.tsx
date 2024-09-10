@@ -12,7 +12,7 @@ const Deposits = () => {
                 </span>
                 <p className="text-[32px] text-[#364a63]">Financial Service</p>
                 <p className="w-[60%] leading-normal text-[#8492A6] max-[650px]:w-[100%]">
-                    We offer investments to theinvestifyglobe members in various financial services. You can select any service that interest you the most to start your investment.
+                    We offer investments to investifyEdge  members in various financial services. You can select any service that interest you the most to start your investment.
                     Please kindly note that the accrued interest on each financial service differ.
                 </p>
                 <div className="w-[50%] h-[250px] rounded-[8px] flex flex-col bg-white justify-center gap-[20px] max-[650px]:w-[100%]">

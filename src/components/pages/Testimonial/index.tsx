@@ -30,7 +30,7 @@ const TestimonialSlider: React.FC = () => {
             <div className='w-[70%] h-[100%] flex flex-col items-center justify-center max-[650px]:w-full'>
                 <span className='py-[40px] z-[2]'>
                     <p className='text-[12px] text-white text-center'>Testimonial</p>
-                    <p className='text-[50px] text-white font-bold'>What Clients Say</p>
+                    <p className='text-[50px] text-white font-bold max-[650px]:text-[40px]'>What Clients Say</p>
                 </span>
                 <Swiper
                     modules={[Navigation, Pagination, Autoplay]}
@@ -56,7 +56,7 @@ const TestimonialSlider: React.FC = () => {
                     {testimonials.map((testimonial, index) => (
                         <SwiperSlide key={index} className='w-[100%]'>
                             <div className="shadow-lg w-[300px] max-[650px]:w-full">
-                                <div className='p-6 bg-white h-[250px] w-full flex items-center max-[650px]:w-full'>
+                                <div className='p-6 bg-white h-[250px] w-full flex items-center max-[650px]:w-[90%]'>
                                     <p className="text-gray-600">{testimonial.feedback}</p>
                                 </div>
                                 <div className='mt-[20px] flex gap-[10px]'>

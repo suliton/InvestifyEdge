@@ -76,7 +76,7 @@ const Header = () => {
 
             <p className="cursor-pointer hover:text-[#364a63]" onClick={() => navigate('/career')}>Career</p>
             <p className="cursor-pointer hover:text-[#364a63]" onClick={() => navigate('/contact')}>Contact</p>
-            <button className="border h-[40px] w-[120px] border-[#364a63] hover:bg-[#364a63] hover:text-white">
+            <button className="border h-[40px] w-[120px] border-[#364a63] hover:bg-[#364a63] hover:text-white" onClick={() => navigate('/login')}>
               Login
             </button>
           </span>
@@ -115,7 +115,7 @@ const Header = () => {
 
           <p className="mb-4 cursor-pointer hover:text-[#364a63]" onClick={() => navigate('/career')}>Career</p>
           <p className="mb-4 cursor-pointer hover:text-[#364a63]" onClick={() => navigate('/contact')}>Contact</p>
-          <button className="border h-[40px] w-[120px] border-[#364a63] hover:bg-[#364a63] hover:text-white mt-4">
+          <button className="border h-[40px] w-[120px] border-[#364a63] hover:bg-[#364a63] hover:text-white mt-4" onClick={() => navigate('/login')}>
             Login
           </button>
         </div>

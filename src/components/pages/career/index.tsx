@@ -13,22 +13,22 @@ const CareerSection: React.FC = () => {
                     transition={{ duration: 0.8 }}
                     className="w-[60%] bg-[#364a637b] p-[80px] flex flex-col items-center justify-center rounded-[10px] relative max-[650px]:w-[100%]">
                     <div className="w-[100%] flex items-center flex-col justify-center">
-                        <h1 className="text-[60px] w-[90%] text-white font-bold max-w-[1000px] text-center max-[650px]:text-[40px]">
+                        <h1 className="text-[60px] w-[90%] text-white font-bold max-w-[1000px] text-center max-[650px]:text-[40px] max-[650px]:w-full">
                             Join
                         </h1>
-                        <h1 className="text-[60px] w-[90%] text-white font-bold max-w-[1000px] text-center max-[650px]:text-[40px]">
+                        <h1 className="text-[60px] w-[90%] text-white font-bold max-w-[1000px] text-center max-[650px]:text-[40px] max-[650px]:w-full">
                             InvestifyEdge
                         </h1>
-                        <p className='text-white text-center'>Help us build the future by empowering everyday people to generate income and control their wealth</p>
+                        <p className='text-white text-center max-[650px]:w-full'>Help us build the future by empowering everyday people to generate income and control their wealth</p>
                     </div>
                 </motion.div>
             </div>
-            <section className="container mx-auto mt-[50px] mb-[50px] flex items-center justify-between">
-                <div className="w-1/2">
+            <section className="container mx-auto mt-[50px] mb-[50px] flex items-center justify-between max-[650px]:w-full max-[650px]:flex-col">
+                <div className="w-1/2 max-[650px]:w-full p-[20px]">
                     <p className='text-[14px] text-black '>Work With Us</p>
-                    <h1 className="text-[40px] font-bold mb-6">Become a theinvestifyglobe staff</h1>
+                    <h1 className="text-[40px] font-bold mb-6">Become a investifyEdge  staff</h1>
                     <p className="text-[14px] mb-6">
-                        At theinvestifyglobe, each of us is a captain of our spaceship and free to come up
+                        At investifyEdge , each of us is a captain of our spaceship and free to come up
                         with new ideas to improve our journey. We’re empowered to make decisions for
                         ourselves, for our team, and even for our leaders in order to innovate and build trust.
                         Join us in our mission to give our customers greater choice, independence, and opportunity.
@@ -44,7 +44,7 @@ const CareerSection: React.FC = () => {
                 </div>
 
                 {/* Image Section */}
-                <div className="w-[40%]">
+                <div className="w-[40%] max-[650px]:w-full">
                     <img
                         src="/career.jpg"
                         alt="Investify Globe staff"

@@ -7,7 +7,7 @@ import { FaEnvelope } from 'react-icons/fa';
 
 const Contact: React.FC = () => {
     return (
-        <>
+        <div className='w-full'>
             <div className="w-full h-[100vh] max-[650px]:w-[100%]  bg-cover bg-center bg-no-repeat relative flex justify-center items-center " style={{ backgroundImage: `url(${bgImage})` }}>
                 <div className="absolute inset-0 bg-[#0000007b]"></div>
                 <motion.div
@@ -26,15 +26,15 @@ const Contact: React.FC = () => {
                     </div>
                 </motion.div>
             </div>
-            <section className="container mx-auto mt-12 flex items-center justify-between">
+            <section className="container mx-auto mt-12 flex items-center justify-between max-[650px]:flex-col max-[650px]:gap-[20px] ">
                 {/* Text and Info Section */}
-                <div className="w-1/2">
+                <div className="w-1/2 max-[650px]:w-full max-[650px]:p-[20px]">
                     <p className='font-light text-[16px]'>Let's Talk</p>
                     <h1 className="text-5xl font-bold mb-4">Get in Touch.</h1>
                     <p className="text-lg mb-8">
                         Having troubles, suggestions or information you would like to share? Drop a message.
                     </p>
-                    <div className="space-y-4">
+                    <div className="space-y-4 max-[650px]:w-full" >
                         <div className="flex items-center gap-[10px]">
                             <span className='w-[40px] h-[40px] rounded-full bg-[#364a63] flex items-center justify-center '>
                                 <FaLocationDot  className='text-white text-[20px]'/>
@@ -57,7 +57,7 @@ const Contact: React.FC = () => {
                 </div>
 
                 {/* Image Section */}
-                <div className="w-1/2">
+                <div className="w-1/2 max-[650px]:w-full">
                     <img
                         src="/customer.jpg" // Update this with the actual image path
                         alt="Customer support"
@@ -65,7 +65,7 @@ const Contact: React.FC = () => {
                     />
                 </div>
             </section>
-        </>
+        </div>
 
     );
 };

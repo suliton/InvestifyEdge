@@ -46,7 +46,7 @@ const Purpose = () => {
                             </motion.div>
                             <div className=" w-[100%] p-[20px] gap-[10px] h-[50%] flex flex-col items-center justify-center">
                                 <p className="text-[24px] font-bold max-[650px]:text-[20px]">High Frequency Trading</p>
-                                <p className="text-center text-[12px]">Global institutions, leading hedge funds and industry innovators turn to theinvestifyglobe for bitcoin cryptocurrency trading advice and market-making services.</p>
+                                <p className="text-center text-[12px]">Global institutions, leading hedge funds and industry innovators turn to investifyEdge  for bitcoin cryptocurrency trading advice and market-making services.</p>
                             </div>
                         </motion.div>
                     </div>

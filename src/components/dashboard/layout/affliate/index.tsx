@@ -23,7 +23,7 @@ const Affliate = () => {
           <p>Dashboard</p>
         </span>
         <p className="text-[32px] text-[#364a63]">Referral</p>
-        <p className="w-[60%] leading-normal text-[#8492A6] max-[650px]:w-[100%]">Grow your theinvestifyglobe network by inviting your friends and family to join you.</p>
+        <p className="w-[60%] leading-normal text-[#8492A6] max-[650px]:w-[100%]">Grow your investifyEdge  network by inviting your friends and family to join you.</p>
 
         <Table columns={columns} data={referrals}/>
       </div>

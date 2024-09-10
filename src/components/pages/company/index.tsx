@@ -23,18 +23,18 @@ const Company: React.FC = () => {
                     </div>
                 </motion.div>
             </div>
-            <section className="container mx-auto mt-[50px] mb-[50px] flex items-center justify-between">
-                <div className="w-[45%]">
+            <section className="container mx-auto mt-[50px] mb-[50px] flex items-center justify-between max-[650px]:w-full max-[650px]:flex-col">
+                <div className="w-[45%] max-[650px]:w-full p-[20px]">
                     <p className='text-[14px] text-black mt-[10px] mb-[10px]'>About Company</p>
                     <h1 className="text-5xl font-bold mb-6">For a secure and planned future</h1>
                     <p className="text-[16px] mb-6">
-                        theinvestifyglobe is one of the largest and most experienced international private equity firms. We have an established team of investment professionals, who are focused mainly on investment.
+                        investifyEdge  is one of the largest and most experienced international private equity firms. We have an established team of investment professionals, who are focused mainly on investment.
                     </p>
                     <p className="text-[16px] mb-6">
-                        theinvestifyglobe is run by a team of trading experts who generate profits by buying and selling currencies, stocks, options and commodities on the foreign exchange market. We employ a variety of trading techniques to achieve the set goals for the client.
+                        investifyEdge  is run by a team of trading experts who generate profits by buying and selling currencies, stocks, options and commodities on the foreign exchange market. We employ a variety of trading techniques to achieve the set goals for the client.
                     </p>
                     <p className="text-[16px] mb-6">
-                        theinvestifyglobe consists a team of financial market professionals assembled specifically in order to provide the best possible trading conditions to its customers. Our specialists have been involved in the development of technical specification for designing an up-to-date platform that is suitable for both beginners and experienced traders.
+                        investifyEdge  consists a team of financial market professionals assembled specifically in order to provide the best possible trading conditions to its customers. Our specialists have been involved in the development of technical specification for designing an up-to-date platform that is suitable for both beginners and experienced traders.
                     </p>
                     <p className="text-[16px] mb-6">
                         As long as we have existed we have been trying to leverage lower risk and higher profits for our customers through innovative and insightful analysis, information dispersion, and expert assistance. Our team of professionals is composed of experienced and skilled experts and professionals, who bring a diverse and in depth knowledge to the entire investing process.
@@ -48,7 +48,7 @@ const Company: React.FC = () => {
                 </div>
 
                 {/* Image Section */}
-                <div className="w-[40%]">
+                <div className="w-[40%] max-[650px]:w-full">
                     <img
                         src="/about.jpg"
                         alt="Investify Globe staff"
