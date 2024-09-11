@@ -13,7 +13,7 @@ interface InvestmentPlan {
     name: string;
     minAmount: number;
     maxAmount: number;
-    description: string;
+    percentage: string;
 }
 
 const RealEstate = () => {
@@ -41,10 +41,10 @@ const RealEstate = () => {
     ];
 
     const plans: InvestmentPlan[] = [
-        { name: 'BASIC', minAmount: 5000, maxAmount: 10000, description: 'Profit 1.5% weekly For 1 Month' },
-        { name: 'PLATINUM', minAmount: 100000, maxAmount: 10000000, description: 'Profit 5% weekly For 1 Month' },
-        { name: 'SILVER', minAmount: 5000, maxAmount: 49999, description: 'Profit 53% weekly For 31 Days' },
-        { name: 'GOLD', minAmount: 50000, maxAmount: 99999, description: 'Profit 58.5% weekly For 31 Days' }
+        { name: 'BASIC', minAmount: 5000, maxAmount: 10000, percentage: '50' },
+        { name: 'PLATINUM', minAmount: 100000, maxAmount: 10000000, percentage: '150' },
+        { name: 'SILVER', minAmount: 5000, maxAmount: 49999, percentage: '300' },
+        { name: 'GOLD', minAmount: 50000, maxAmount: 99999, percentage: '400' }
     ];
 
     const handlePaymentMethodClick = (method: PaymentMethod) => {
@@ -98,7 +98,7 @@ const RealEstate = () => {
                                     />
                                     <p className="text-[#8492a6]">{plan.name}</p>
                                 </span>
-                                <p className="text-[12px] text-[#8492a6]">{plan.description} <br /> Minimum Deposit {plan.minAmount} ; Maximum Deposit {plan.maxAmount}</p>
+                                <p className="text-[12px] text-[#8492a6]">Profit Percentage {plan.percentage}%<br /> Minimum Deposit {plan.minAmount} ; Maximum Deposit {plan.maxAmount}</p>
                             </div>
                         ))}
                     </div>

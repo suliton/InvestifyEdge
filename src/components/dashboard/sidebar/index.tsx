@@ -38,6 +38,25 @@ const SideBar = () => {
                             <p>Profit History</p>
                         </span>
                     </div>
+                    <div className="w-full h-[80%] flex flex-col items-center gap-[25px] ">
+                        <p className="w-[90%] text-[13px]">SETTINGS</p>
+                        <span className="flex items-center gap-2 w-[90%] text-[#6e82a5] cursor-pointer hover:text-white" onClick={() => navigate('/dashboard')}>
+                            <RiDashboardFill />
+                            <p>Profile</p>
+                        </span>
+                        <span className="flex items-center gap-2 w-[90%] text-[#6e82a5] cursor-pointer hover:text-white" onClick={() => navigate('/dashboard/affiliate')}>
+                            <HiMiniUserGroup />
+                            <p>Withdrawal Gateway</p>
+                        </span>
+                        <span className="flex items-center gap-2 w-[90%] text-[#6e82a5] cursor-pointer hover:text-white" onClick={() => navigate('/affilliate')}>
+                            <HiMiniUserGroup />
+                            <p>Password</p>
+                        </span>
+                        <span className="flex items-center gap-2 w-[90%] text-[#6e82a5] cursor-pointer hover:text-white" onClick={() => navigate('/affilliate')}>
+                            <HiMiniUserGroup />
+                            <p>Login</p>
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>

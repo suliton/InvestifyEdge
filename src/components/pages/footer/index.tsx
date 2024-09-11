@@ -4,12 +4,12 @@ import { useNavigate } from 'react-router-dom';
 const Footer: React.FC = () => {
     const navigate = useNavigate()
     return (
-        <footer className="bg-[#111D29] text-white py-20 w-[100%] flex items-center justify-center">
+        <footer className="bg-[#111D29] text-white py-40 w-[100%] flex items-center justify-center">
             <div className='w-[90%]'>
                 <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
                     {/* Logo and Company Information */}
                     <div>
-                        <img src="/logo.png" alt="TheInvestify Globe Logo" className="mb-4" />
+                        <img src="/BigLogo.png" alt="TheInvestify Globe Logo" className="mb-4" />
                         <p>
                             Comprehensive financial advice and investment services that are tailored
                             to meet your individual needs.
@@ -57,11 +57,6 @@ const Footer: React.FC = () => {
                 </div>
 
                 {/* Language Section */}
-                <div className="mt-8 flex flex-col gap-[20px] py-[30px] ">
-                    <p>Language</p>
-                    <p>We support your local languages. Change language below.</p>
-                    <a href="#" className="text-blue-400 hover:underline">Change Language</a>
-                </div>
 
                 {/* Footer Bottom Section */}
                 <div className="mt-4 border-t border-gray-800 pt-4">

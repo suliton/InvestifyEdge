@@ -47,8 +47,8 @@ const Header = () => {
           }`}
       >
         <div className="w-[90%] h-full flex items-center justify-between">
-          <span className="w-[30%] flex items-center">
-            <p className={`text-white ${isScrolled ? 'text-white' : ''}`}>InvestifyEdge</p>
+          <span className="w-[30%] h-[100%] flex items-center">
+            <img src="/BigLogo.png" alt="" className='w-[250px]' />
           </span>
           <span className="w-[70%] flex gap-[70px] items-center text-white text-[14px] max-[650px]:hidden">
             <p className="cursor-pointer hover:text-[#364a63]" onClick={() => navigate('/')}>Home</p>
