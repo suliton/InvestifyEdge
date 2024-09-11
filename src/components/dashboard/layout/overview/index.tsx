@@ -2,9 +2,24 @@ import { useNavigate } from "react-router-dom";
 import TickerTap from "./Ticker-Tape"
 import { IoCloudDownloadOutline, IoCloudUploadOutline } from "react-icons/io5";
 import TradingViewWidget from "./TrandingViewWiddget";
+import { useQuery } from "react-query";
+import { getUser } from "../../../../api/query";
+const { VITE_TOKEN_CLIENT } = import.meta.env;
 
 const Overview = () => {
     const navigate = useNavigate()
+    const {
+        data
+    } = useQuery(["getUser"], getUser, {
+        enabled: !!localStorage.getItem(VITE_TOKEN_CLIENT),
+        onSuccess: () => {
+        },
+        onError: () => {
+
+        },
+    });
+    // console.log(data)
+    const firstName = data?.data?.data?.first_name
     return (
         <div className="w-full h-[100%]  flex flex-col items-center overflow-auto">
             <div className="mt-[20px] w-[95%]">
@@ -13,7 +28,7 @@ const Overview = () => {
             <div className="w-[95%] flex flex-wrap items-center p-[10px] max-[650px]:gap-[20px] max-[650px]:p-[0px] mb-[20px]">
                 <div className="w-[65%] max-[650px]:w-[100%]">
                     <p className="text-[30px]">Dashboard</p>
-                    <p>Welcome Anthony!, what would you like to do today?</p>
+                    <p>Welcome {firstName}!, what would you like to do today?</p>
                 </div>
                 <div className="w-[35%] flex items-center justify-end gap-[10px] max-[650px]:w-[100%] max-[650px]:justify-start">
                     <button

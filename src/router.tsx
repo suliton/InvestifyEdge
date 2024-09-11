@@ -17,6 +17,7 @@ import CreateAccount from "./components/auth/user/signup";
 import ForgotPassword from "./components/auth/user/forgotPassword";
 import ResetPassword from "./components/auth/user/resetPassword";
 import Verify from "./components/auth/user/verify";
+import DepositDetails from "./components/dashboard/layout/deposit/DepositDetails";
 const router = createHashRouter([
     {
         path: '/',
@@ -99,6 +100,10 @@ const router = createHashRouter([
             {
                 path: '/dashboard/crypto',
                 element: <Crypto />
+            },
+            {
+                path: '/dashboard/deposit-details',
+                element: <DepositDetails />,
             },
             {
                 path: '/dashboard/withdraw',
