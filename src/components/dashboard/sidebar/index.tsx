@@ -5,8 +5,8 @@ const SideBar = () => {
     const navigate = useNavigate()
     return (
         <div className="w-full h-full">
-            <div>
-                <img src="" alt="logo" className="h-[80px]" />
+            <div className="w-full flex flex-col gap-[30px]">
+                <img src="/BigLogo.png" alt="logo" className="w-[200px]" />
                 <div className="w-full flex flex-col gap-[20px]">
                     <div className="w-full h-[80%] flex flex-col items-center gap-4">
                         <p className="w-[90%] text-[13px]">MEMBER ACCOUNT</p>
