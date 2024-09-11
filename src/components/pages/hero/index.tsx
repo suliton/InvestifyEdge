@@ -1,20 +1,22 @@
 import { FaChartPie, FaMoneyBill, FaUser } from "react-icons/fa";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import 'animate.css';
 import bgImage from '../../../assets/bgimage.jpg'
-import { useEffect, useState } from "react";
+// import { useEffec } from "react";
+import { useNavigate } from "react-router-dom";
 
-const texts = ['Collection', 'Settlements', 'Payments'];
+// const texts = ['Collection', 'Settlements', 'Payments'];
 const HeroPage = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const navigate = useNavigate()
+  // const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
-    }, 3000);
+  // useEffect(() => {
+  //   const intervalId = setInterval(() => {
+  //     setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
+  //   }, 3000);
 
-    return () => clearInterval(intervalId);
-  }, []);
+  //   return () => clearInterval(intervalId);
+  // }, []);
   return (
     <>
       <div className="w-full h-[100vh] max-[650px]:w-[100%]  bg-cover bg-center bg-no-repeat relative flex justify-center " style={{ backgroundImage: `url(${bgImage})` }}>
@@ -24,7 +26,7 @@ const HeroPage = () => {
               max-[650px]:text-[40px]">
               International <br /> Private Equity <br /> Company
             </h1>
-            <div className="relative h-10 overflow-hidden">
+            {/* <div className="relative h-10 overflow-hidden">
               <AnimatePresence mode="wait">
                 <motion.span
                   key={currentIndex}
@@ -37,12 +39,13 @@ const HeroPage = () => {
                   {texts[currentIndex]}
                 </motion.span>
               </AnimatePresence>
-            </div>
+            </div> */}
             <div className="w-[90%] h-[100px] flex items-center justify-center">
               <motion.button
                 className="p-[20px] bg-[#364a63] text-white text-[18px] max-[768px]:text-[16px] max-[650px]:text-[14px]"
                 whileInView={{ x: [100, 0], opacity: [0, 1] }}
                 transition={{ duration: 0.8 }}
+                onClick={()=> navigate('/signup')}
               >
                 Start Membership Now
               </motion.button>

@@ -41,7 +41,7 @@ const RealEstate = () => {
     ];
 
     const plans: InvestmentPlan[] = [
-        { name: 'BASIC', minAmount: 5000, maxAmount: 10000, percentage: '50' },
+        { name: 'BASIC', minAmount: 1000, maxAmount: 10000, percentage: '50' },
         { name: 'PLATINUM', minAmount: 100000, maxAmount: 10000000, percentage: '150' },
         { name: 'SILVER', minAmount: 5000, maxAmount: 49999, percentage: '300' },
         { name: 'GOLD', minAmount: 50000, maxAmount: 99999, percentage: '400' }
@@ -58,9 +58,22 @@ const RealEstate = () => {
     };
 
     const handleProceedClick = () => {
+        if (selectedPlan && amount) {
+            const amountValue = parseFloat(amount); 
+            if (amountValue < selectedPlan.minAmount || amountValue > selectedPlan.maxAmount) {
+                toast.error(`Please enter an amount between ${selectedPlan.minAmount} and ${selectedPlan.maxAmount} for the ${selectedPlan.name} plan.`);
+                return; 
+            }
+        }
+    
         if (selectedMethod && selectedPlan && amount) {
-            navigate('/dashboard/deposit-details', { 
-                state: { method: selectedMethod, plan: selectedPlan, amount } 
+            navigate('/dashboard/deposit-details', {
+                state: { 
+                    method: selectedMethod, 
+                    plan: selectedPlan, 
+                    amount,  
+                    percentage: selectedPlan.percentage
+                }
             });
         } else {
             alert('Please select a plan, a payment method, and enter an amount.');

@@ -18,6 +18,8 @@ import ForgotPassword from "./components/auth/user/forgotPassword";
 import ResetPassword from "./components/auth/user/resetPassword";
 import Verify from "./components/auth/user/verify";
 import DepositDetails from "./components/dashboard/layout/deposit/DepositDetails";
+import Profit from "./components/dashboard/layout/withdraw/profit";
+import Balance from "./components/dashboard/layout/withdraw/balance";
 const router = createHashRouter([
     {
         path: '/',
@@ -108,6 +110,14 @@ const router = createHashRouter([
             {
                 path: '/dashboard/withdraw',
                 element: <Withdraw />
+            },
+            {
+                path: '/dashboard/withdraw-profit',
+                element: <Profit />
+            },
+            {
+                path: '/dashboard/withdraw-balance',
+                element: <Balance />
             },
             {
                 path: '/dashboard/affiliate',

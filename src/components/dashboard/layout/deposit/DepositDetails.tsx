@@ -3,7 +3,7 @@ import QRCode from "qrcode.react"; // You'll need to install this package
 import { useLocation, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import { useDropzone } from 'react-dropzone';
-import { useMutation, useQueryClient } from "react-query";
+import { useMutation } from "react-query";
 import { completeDeposit } from "../../../../api/mutation";
 interface PaymentMethod {
     name: string;
@@ -15,27 +15,28 @@ interface InvestmentPlan {
     name: string;
     minAmount: number;
     maxAmount: number;
-    description: string;
+    percentage: string;
 }
 
 interface LocationState {
     method: PaymentMethod;
     amount: string;
     plan: InvestmentPlan;
+    percentage: string;
 }
 
 const DepositDetails: React.FC = () => {
     const location = useLocation();
     const navigate = useNavigate()
-    const { method, amount, plan } = location.state as LocationState;
+    const { method, amount, plan, percentage } = location.state as LocationState;
     const [file, setFile] = useState<File | null>(null);
 
-    const queryClient = useQueryClient()
+    // const queryClient = useQueryClient()
     const { mutate, isLoading } = useMutation(completeDeposit, {
         onSuccess: (data) => {
             // console.log(data);
-            queryClient.invalidateQueries('transactionHistory')
-            queryClient.invalidateQueries('getDepositsHistory')
+            // queryClient.invalidateQueries('transactionHistory')
+            // queryClient.invalidateQueries('getDepositsHistory')
             toast.dismiss(loadingToastId);
             toast.success(data?.data?.message, { style: { textAlign: 'center', width: '100%' } })
             navigate('/dashboard')
@@ -78,9 +79,13 @@ const DepositDetails: React.FC = () => {
         formData.append('payment_method', method.name);
         formData.append('wallet_address', method.address);
         formData.append('payment_proof', file);
+        formData.append('selected_plan', plan.name);
+        formData.append('interest_percentage', percentage);
 
         loadingToastId = toast.loading('Waiting...');
         mutate(formData);
+        console.log(formData);
+        
     };
     return (
         <div className="max-w-lg mx-auto bg-white shadow-lg rounded-lg p-8 mt-8">
@@ -106,10 +111,10 @@ const DepositDetails: React.FC = () => {
                     <h3 className="text-gray-900 text-[20px]">Plan</h3>
                     <p className="text-[14px]">{plan.name}</p>
                     <p className="text-gray-600">
-                        {plan.description}
+                       Interest Percentage: {plan.percentage}%
                     </p>
                     <p className="text-gray-500 text-sm">
-                        Minimum Deposit {plan.minAmount} || Maximum Deposit {plan.maxAmount}
+                      Range:   Minimum Deposit {plan.minAmount} || Maximum Deposit {plan.maxAmount}
                     </p>
                 </div>
             </div>
