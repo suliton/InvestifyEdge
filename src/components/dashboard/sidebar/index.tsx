@@ -3,6 +3,11 @@ import { useNavigate } from "react-router-dom";
 import { HiMiniUserGroup } from "react-icons/hi2";
 const SideBar = () => {
     const navigate = useNavigate()
+
+    const handleLogout = () =>{
+        localStorage.removeItem('client/token')
+        navigate('/')
+    }
     return (
         <div className="w-full h-full">
             <div className="w-full flex flex-col gap-[30px]">
@@ -52,7 +57,7 @@ const SideBar = () => {
                             <HiMiniUserGroup />
                             <p>Password</p>
                         </span>
-                        <span className="flex items-center gap-2 w-[90%] text-[#6e82a5] cursor-pointer hover:text-white" onClick={() => navigate('/affilliate')}>
+                        <span className="flex items-center gap-2 w-[90%] text-[#6e82a5] cursor-pointer hover:text-white" onClick={handleLogout}>
                             <HiMiniUserGroup />
                             <p>Login</p>
                         </span>

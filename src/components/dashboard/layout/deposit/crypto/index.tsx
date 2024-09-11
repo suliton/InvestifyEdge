@@ -26,17 +26,17 @@ const Crypto = () => {
         {
             name: 'BITCOIN',
             img: '/bitcoin-btc-logo.png',
-            address: 'bc1quwyuuersnxu8fa2e4pkpjplrn043l5zeuzq3nq'
+            address: '15vwsQoZQ8VjfpHL3gsw3Zbr3k4KCHSGUg'
         },
         {
             name: 'ETHERIUM',
             img: '/ethereum-eth-logo.png',
-            address: '0x77a5322E6bcff066cc41986f120caA18C19307DE'
+            address: '0x485c1576971481abfb8bd88342e5537144718008'
         },
         {
             name: 'USDT',
             img: '/usdt-logo.png',
-            address: '0x77a5322E6bcff066cc41986f120caA18C19307DE'
+            address: '0x485c1576971481abfb8bd88342e5537144718008'
         }
     ];
 

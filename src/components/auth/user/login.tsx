@@ -37,7 +37,8 @@ const Login = () => {
     };
 
     return (
-        <div className="w-full h-[100vh] flex items-center justify-center bg-[#364a63]">
+        <div className="w-full h-[100vh] flex items-center justify-center bg-[#364a63] flex-col gap-[30px]">
+            <img src="/BigLogo.png" alt="" className='w-[250px] max-[650px]:w-[300px]' />
             <div className="w-[30%] h-[60vh] bg-white flex justify-center items-center flex-col max-[650px]:w-full p-5 shadow-lg">
                 <h2 className="font-semibold text-[20px] mb-4">Welcome back to InvestifyEdge</h2>
                 <form onSubmit={handleSubmit} className="w-full flex flex-col gap-4">
