@@ -41,10 +41,10 @@ const Crypto = () => {
     ];
 
     const plans: InvestmentPlan[] = [
-        { name: 'BASIC', minAmount: 1000, maxAmount: 10000, percentage: '50' },
-        { name: 'PLATINUM', minAmount: 100000, maxAmount: 10000000, percentage: '150' },
-        { name: 'SILVER', minAmount: 5000, maxAmount: 49999, percentage: '300' },
-        { name: 'GOLD', minAmount: 50000, maxAmount: 99999, percentage: '400' }
+        { name: 'BASIC', minAmount: 1000,maxAmount: 9999,percentage: '50' },
+        { name: 'PLATINUM', minAmount: 10000, maxAmount: 49999, percentage: '150' },
+        { name: 'SILVER', minAmount: 50000, maxAmount: 99999, percentage: '300' },
+        { name: 'GOLD', minAmount: 100000, maxAmount: 5000000, percentage: '400' }
     ];
 
     const handlePaymentMethodClick = (method: PaymentMethod) => {

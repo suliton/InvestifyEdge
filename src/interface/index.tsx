@@ -24,10 +24,12 @@ export interface UsersIgnupInterface {
 }
 
 export interface IErrorResponse {
-    message: any;
+    message: string;
     response: {
         data: {
-            error: any;
+            error: {
+                message: string
+            };
             message: string;
         };
     };

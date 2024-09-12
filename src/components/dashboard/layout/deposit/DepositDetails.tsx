@@ -5,6 +5,7 @@ import toast from "react-hot-toast";
 import { useDropzone } from 'react-dropzone';
 import { useMutation } from "react-query";
 import { completeDeposit } from "../../../../api/mutation";
+import { IErrorResponse } from "../../../../interface";
 interface PaymentMethod {
     name: string;
     img: string;
@@ -41,7 +42,7 @@ const DepositDetails: React.FC = () => {
             toast.success(data?.data?.message, { style: { textAlign: 'center', width: '100%' } })
             navigate('/dashboard')
         },
-        onError: (error: any) => {
+        onError: (error: IErrorResponse) => {
             // console.error(error?.response?.data?.error?.message || error?.message);
             toast.dismiss(loadingToastId);
             toast.error(error?.response?.data?.error?.message || error?.message, { style: { textAlign: 'center', width: '100%' } })

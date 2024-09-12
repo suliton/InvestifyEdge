@@ -45,7 +45,7 @@ const CreateAccount = () => {
     return (
         <div className="w-full h-[100vh] flex items-center justify-center bg-[#364a63] overflow-scroll flex-col gap-[20px]">
             <img src="/BigLogo.png" alt="" className='w-[250px] max-[650px]:w-[300px]' />
-            <div className="w-[40%] p-[20px] bg-white flex justify-center items-center flex-col max-[650px]:w-[100%] gap-4 overflow-scroll ">
+            <div className="w-[40%] p-[20px] bg-white flex justify-center items-center flex-col max-[650px]:w-[100%] gap-4">
 
                 <span className="w-[100%] flex flex-col gap-[10px]">
                     <p className="text-[26px]">Become a Member</p>
