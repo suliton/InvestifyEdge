@@ -44,3 +44,15 @@ export interface IResponseData {
         message: string
     }
 }
+
+export interface PaymentMethod {
+    name: string;
+    img: string;
+    address: string;
+  }
+
+  export interface IWithdrawInterface{
+    amount: number;
+    payment_channel: string;
+    wallet_address: string;
+  }

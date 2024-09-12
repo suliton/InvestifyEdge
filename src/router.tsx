@@ -20,6 +20,7 @@ import Verify from "./components/auth/user/verify";
 import DepositDetails from "./components/dashboard/layout/deposit/DepositDetails";
 import Profit from "./components/dashboard/layout/withdraw/profit";
 import Balance from "./components/dashboard/layout/withdraw/balance";
+import UpdatePassword from "./components/dashboard/layout/updatePassword";
 const router = createHashRouter([
     {
         path: '/',
@@ -122,6 +123,10 @@ const router = createHashRouter([
             {
                 path: '/dashboard/affiliate',
                 element: <Affliate />
+            },
+            {
+                path: '/dashboard/update-password',
+                element: <UpdatePassword />
             },
         ]
     }

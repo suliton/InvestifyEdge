@@ -73,7 +73,7 @@ const SideBar: React.FC<SideBarProps> = ({ setShowSidebar }) => {
                             <FiSettings />
                             <p>Withdrawal Gateway</p>
                         </span>
-                        <span className="flex items-center gap-2 w-[90%] text-[#6e82a5] cursor-pointer hover:text-white" onClick={() => handleNavigation('/affilliate')}>
+                        <span className="flex items-center gap-2 w-[90%] text-[#6e82a5] cursor-pointer hover:text-white" onClick={() => handleNavigation('/dashboard/update-password')}>
                             <FaLock />
                             <p>Password</p>
                         </span>

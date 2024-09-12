@@ -1,5 +1,5 @@
 import axios from "axios";
-import { AdminLoginInterface, AdminsIgnupInterface, UserLoginInterface, UsersIgnupInterface } from "../interface";
+import { AdminLoginInterface, AdminsIgnupInterface, IWithdrawInterface, UserLoginInterface, UsersIgnupInterface } from "../interface";
 
 const { VITE_ENDPOINT_VERCEL } = import.meta.env;
 const { VITE_ENDPOINT_RENDER } = import.meta.env;
@@ -54,14 +54,14 @@ export const completeDeposit = async (data: FormData) => {
     })
 }
 
-export const completeInvestment = async (data: any) => {
-    const usertoken = localStorage.getItem(VITE_TOKEN_CLIENT)
-    return await axios.post(`${VITE_ENDPOINT_VERCEL}/invest`, data, {
-        headers: {
-            'Authorization': `Bearer ${usertoken}`,
-        }
-    })
-}
+// export const completeInvestment = async (data: any) => {
+//     const usertoken = localStorage.getItem(VITE_TOKEN_CLIENT)
+//     return await axios.post(`${VITE_ENDPOINT_VERCEL}/invest`, data, {
+//         headers: {
+//             'Authorization': `Bearer ${usertoken}`,
+//         }
+//     })
+// }
 
 export const userUpdatePassword = async (current_password: string , new_password: string ) => {
     const usertoken = localStorage.getItem(VITE_TOKEN_CLIENT)
@@ -98,8 +98,9 @@ export const updateUser = async (userData: {
         withdrawable_balance
       });
       return response.data; // Return the data after successful update
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
-      throw new Error('Failed to update user'); // Handle errors appropriately
+      throw new Error('Failed to update user'); 
     }
   };
 
@@ -107,7 +108,7 @@ export const updateUser = async (userData: {
     return await axios.delete(`${VITE_ENDPOINT_VERCEL}/user/${id}`,{})
   }
 
-  export const withdrawBalance = async (data: any) => {
+  export const withdrawBalance = async (data: IWithdrawInterface) => {
     const usertoken = localStorage.getItem(VITE_TOKEN_CLIENT)
     return await axios.post(`${VITE_ENDPOINT_VERCEL}/withdraw`, data, {
         headers: {
