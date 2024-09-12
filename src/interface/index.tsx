@@ -34,3 +34,12 @@ export interface IErrorResponse {
         };
     };
 }
+
+export interface IResponseData {
+    data: {
+        data: {
+            token: string
+        }
+        ststus: string
+    }
+}

@@ -43,8 +43,8 @@ const CreateAccount = () => {
     };
 
     return (
-        <div className="w-full h-[100vh] flex items-center justify-center bg-[#364a63] overflow-scroll flex-col gap-[20px]">
-            <img src="/BigLogo.png" alt="" className='w-[250px] max-[650px]:w-[300px]' />
+        <div className="w-full h-[100vh] flex items-center justify-center bg-[#364a63] overflow-scroll flex-col gap-[10px]">
+            <img src="/BigLogo.png" alt="" className='w-[250px] max-[650px]:w-[200px] max-[650px]:mt-[40px] max-[375px]:mt-[90px]' />
             <div className="w-[40%] p-[20px] bg-white flex justify-center items-center flex-col max-[650px]:w-[100%] gap-4">
 
                 <span className="w-[100%] flex flex-col gap-[10px]">
@@ -59,7 +59,7 @@ const CreateAccount = () => {
                             value={firstName}
                             onChange={(e) => setFirstName(e.target.value)}
                             placeholder="First Name"
-                            className="w-[100%] h-[50px] p-[10px] border border-[lightgrey]  outline-none"
+                            className="w-[100%] h-[40px] p-[10px] border border-[lightgrey]  outline-none"
                         />
                     </span>
                     <span className="w-[100%] flex flex-col gap-[10px]">
@@ -69,7 +69,7 @@ const CreateAccount = () => {
                             value={lastName}
                             onChange={(e) => setLastName(e.target.value)}
                             placeholder="Last Name"
-                            className="w-[100%] h-[50px] p-[10px] border border-[lightgrey]  outline-none"
+                            className="w-[100%] h-[40px] p-[10px] border border-[lightgrey]  outline-none"
                         />
                     </span>
                     <span className="w-[100%] flex flex-col gap-[10px]">
@@ -79,7 +79,7 @@ const CreateAccount = () => {
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             placeholder="Email"
-                            className="w-[100%] h-[50px] p-[10px] border border-[lightgrey]  outline-none"
+                            className="w-[100%] h-[40px] p-[10px] border border-[lightgrey]  outline-none"
                         />
                     </span>
                     <span className="w-[100%] flex flex-col gap-[10px] relative">
@@ -89,11 +89,11 @@ const CreateAccount = () => {
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                             placeholder="Password"
-                            className="w-[100%] h-[50px] p-[10px] border border-[lightgrey] outline-none"
+                            className="w-[100%] h-[40px] p-[10px] border border-[lightgrey] outline-none"
                         />
                         <span
                             onClick={() => setShowPassword(!showPassword)}
-                            className="absolute right-4 top-[55px] cursor-pointer"
+                            className="absolute right-4 top-[50px] cursor-pointer"
                         >
                             {showPassword ? <FaEyeSlash /> : <FaEye />}
                         </span>
@@ -105,7 +105,7 @@ const CreateAccount = () => {
                             value={referralCode}
                             onChange={(e) => setReferralCode(e.target.value)}
                             placeholder="Referral Code"
-                            className="w-[100%] h-[50px] p-[10px] border border-[lightgrey]  outline-none"
+                            className="w-[100%] h-[40px] p-[10px] border border-[lightgrey]  outline-none"
                         />
                     </span>
                     <span className="w-[100%] flex flex-col gap-[10px]">
