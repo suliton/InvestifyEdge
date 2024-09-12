@@ -3,7 +3,7 @@ import toast from "react-hot-toast";
 import { useMutation } from "react-query";
 import { useNavigate } from "react-router-dom";
 import { userForgetPassword } from "../../../api/mutation";
-import { IErrorResponse } from "../../../interface";
+import { IErrorResponse, IResponseData } from "../../../interface";
 
 const ForgotPassword = () => {
     const navigate = useNavigate();
@@ -12,7 +12,7 @@ const ForgotPassword = () => {
     const [email, setEmail] = useState('');
 
     const { mutate, isLoading } = useMutation(userForgetPassword, {
-        onSuccess: async (data: any) => {
+        onSuccess: async (data: IResponseData) => {
             toast.success(data?.data?.message);
             navigate('/login');
         },

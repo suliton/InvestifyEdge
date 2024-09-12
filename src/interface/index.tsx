@@ -40,6 +40,7 @@ export interface IResponseData {
         data: {
             token: string
         }
-        ststus: string
+        ststus: string;
+        message: string
     }
 }
