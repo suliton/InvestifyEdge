@@ -45,7 +45,7 @@ const Layout = () => {
                 {
                     showSideBar && (
                         <div className="absolute flex top-0 left-0 bg-[#364a6358] h-[100vh] w-[100%] overflow-hidden z-[100] min-[768px]:hidden">
-                            <div className="w-[80%] mb-[10px] h-full bg-[#364a63] p-[10px]">
+                            <div className="w-[80%] mb-[10px] h-full bg-[#111D29] p-[10px]">
                                 <SideBar setShowSidebar={setShowSidebar}/>
                             </div>
                             <div className="p-[10px] h-full w-[20%] flex justify-end  " onClick={() => setShowSidebar(!showSideBar)}>
