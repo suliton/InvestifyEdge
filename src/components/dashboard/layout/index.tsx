@@ -23,7 +23,7 @@ const Layout = () => {
             window.removeEventListener('resize', handleResize);  // Cleanup listener on component unmount
         };
     }, []);
-    
+
     const {
         data
     } = useQuery(["getUser"], getUser, {
@@ -44,7 +44,7 @@ const Layout = () => {
                 </span>
                 {
                     showSideBar && (
-                        <div className="absolute flex top-0 left-0 bg-[#364a6358] h-[100vh] w-[100%] overflow-hidden z-[100] max-[768px]:hidden">
+                        <div className="absolute flex top-0 left-0 bg-[#364a6358] h-[100vh] w-[100%] overflow-hidden z-[100] min-[768px]:hidden">
                             <div className="w-[80%] mb-[10px] h-full bg-[#364a63] p-[10px]">
                                 <SideBar setShowSidebar={setShowSidebar}/>
                             </div>
