@@ -21,6 +21,9 @@ import DepositDetails from "./components/dashboard/layout/deposit/DepositDetails
 import Profit from "./components/dashboard/layout/withdraw/profit";
 import Balance from "./components/dashboard/layout/withdraw/balance";
 import UpdatePassword from "./components/dashboard/layout/updatePassword";
+import GateWay from "./components/dashboard/layout/gateWay";
+import DepositHistory from "./components/dashboard/layout/deposit/deposits/history";
+import WithdrawHistory from "./components/dashboard/layout/withdraw/withdrawHistory";
 const router = createHashRouter([
     {
         path: '/',
@@ -127,6 +130,18 @@ const router = createHashRouter([
             {
                 path: '/dashboard/update-password',
                 element: <UpdatePassword />
+            },
+            {
+                path: '/dashboard/update-wallet',
+                element: <GateWay />
+            },
+            {
+                path: '/dashboard/deposit-history',
+                element: <DepositHistory />
+            },
+            {
+                path: '/dashboard/withdraw-history',
+                element: <WithdrawHistory />
             },
         ]
     }

@@ -4,7 +4,6 @@ import { HiMiniUserGroup } from "react-icons/hi2";
 import { BiLogOut } from "react-icons/bi";
 import { FaLock, FaUser } from "react-icons/fa";
 import { FiSettings } from "react-icons/fi";
-import { GiProfit } from "react-icons/gi";
 
 interface SideBarProps {
     setShowSidebar?: React.Dispatch<React.SetStateAction<boolean>>;
@@ -46,7 +45,7 @@ const SideBar: React.FC<SideBarProps> = ({ setShowSidebar }) => {
                     </div>
                     <div className="w-full h-[80%] flex flex-col items-center gap-[25px]">
                         <p className="w-[90%] text-[13px] text-white">FINANCE</p>
-                        <span className="flex items-center gap-2 w-[90%] text-[#6e82a5] cursor-pointer hover:text-white" onClick={() => handleNavigation('/dashboard')}>
+                        <span className="flex items-center gap-2 w-[90%] text-[#6e82a5] cursor-pointer hover:text-white" onClick={() => handleNavigation('/dashboard/deposit-history')}>
                             <RiDashboardFill />
                             <p>Deposits</p>
                         </span>
@@ -54,13 +53,9 @@ const SideBar: React.FC<SideBarProps> = ({ setShowSidebar }) => {
                             <HiMiniUserGroup />
                             <p>Our Packages</p>
                         </span>
-                        <span className="flex items-center gap-2 w-[90%] text-[#6e82a5] cursor-pointer hover:text-white" onClick={() => handleNavigation('/affilliate')}>
+                        <span className="flex items-center gap-2 w-[90%] text-[#6e82a5] cursor-pointer hover:text-white" onClick={() => handleNavigation('/dashboard/withdraw-history')}>
                             <HiMiniUserGroup />
                             <p>Withdrawals</p>
-                        </span>
-                        <span className="flex items-center gap-2 w-[90%] text-[#6e82a5] cursor-pointer hover:text-white" onClick={() => handleNavigation('/affilliate')}>
-                            <GiProfit />
-                            <p>Profit History</p>
                         </span>
                     </div>
                     <div className="w-full h-[80%] flex flex-col items-center gap-[25px]">
@@ -69,7 +64,7 @@ const SideBar: React.FC<SideBarProps> = ({ setShowSidebar }) => {
                             <FaUser />
                             <p>Profile</p>
                         </span>
-                        <span className="flex items-center gap-2 w-[90%] text-[#6e82a5] cursor-pointer hover:text-white" onClick={() => handleNavigation('/dashboard/affiliate')}>
+                        <span className="flex items-center gap-2 w-[90%] text-[#6e82a5] cursor-pointer hover:text-white" onClick={() => handleNavigation('/dashboard/update-wallet')}>
                             <FiSettings />
                             <p>Withdrawal Gateway</p>
                         </span>

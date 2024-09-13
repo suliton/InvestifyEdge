@@ -56,3 +56,25 @@ export interface PaymentMethod {
     payment_channel: string;
     wallet_address: string;
   }
+
+  export interface ITransaction  {
+    investment: {
+      selected_plan: string | null;
+      interest_percentage: number;
+      amount: number;
+      investment_date: string;
+    } | null;
+    _id: string;
+    user_id: string;
+    total_balance: number;
+    withdrawable_balance: number;
+    payment_method: string;
+    transaction_type: string;
+    processed: boolean;
+    wallet_address: string;
+    status: string;
+    payment_proof: string;
+    createdAt: string;
+    updatedAt: string;
+  };
+  

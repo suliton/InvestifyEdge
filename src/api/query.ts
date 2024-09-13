@@ -72,7 +72,7 @@ export const getAllPendingDeposit = async () => {
     )
 }
 
-export const getOneUser = async (id: string | undefined): Promise<AxiosResponse<any>> => {
+export const getOneUser = async (id: string | undefined): Promise<AxiosResponse<unknown>> => {
     const admintoken = localStorage.getItem(VITE_TOKEN_ADMIN)
     return await axios.get(`${VITE_ENDPOINT_VERCEL}/admin/users/${id}`, {
         headers: {
@@ -92,6 +92,15 @@ export const getWithdrawalHistory = async () =>{
 export const getDepositsHistory = async () =>{
     const usertoken = localStorage.getItem(VITE_TOKEN_CLIENT)
     return await axios.get(`${VITE_ENDPOINT_VERCEL}/transactions/deposit`, {
+        headers: {
+            'Authorization': `Bearer ${usertoken}`,
+        },
+    })
+}
+
+export const getAffiliatesHistory = async () =>{
+    const usertoken = localStorage.getItem(VITE_TOKEN_CLIENT)
+    return await axios.get(`${VITE_ENDPOINT_VERCEL}/users/affiliates`, {
         headers: {
             'Authorization': `Bearer ${usertoken}`,
         },
