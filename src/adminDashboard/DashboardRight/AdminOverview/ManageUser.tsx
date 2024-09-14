@@ -117,7 +117,7 @@ const ManageUser = () => {
     <div className="ManageUserMain">
       <div className="ManageUserWrap">
         <div className="ManageUserBackButtonWrap">
-          <button onClick={() => navigate('/admin-dashboard/All-user')} style={{color: 'white'}} >Back</button>
+          <button onClick={() => navigate('/admin-dashboard/alluser')} style={{color: 'white'}} >Back</button>
           <button onClick={toggleDropdown} style={{ backgroundColor: 'transparent', border: '1px solid lightgrey', color: 'black' }}>Action</button>
           {isDropdownVisible && (
             <div className="ManageUserActionButtonDropDown">

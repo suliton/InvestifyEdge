@@ -74,7 +74,7 @@ const Table = <T extends object>({
                                 <tr
                                     key={rowIndex}
                                     className="bg-white border-b last:border-0 hover:bg-gray-100 cursor-pointer"
-                                    onClick={() => onRowClick?.(row)}  // Ensure row is of type T
+                                    onClick={() => onRowClick?.(row)}
                                 >
                                     {columns.map((column) => (
                                         <td
@@ -102,19 +102,19 @@ const Table = <T extends object>({
             </div>
 
             <div className="flex justify-between items-center mt-4">
-                <span>
+                <span className="max-[650px]:text-[12px]">
                     Showing {currentPage} of {totalPages}
                 </span>
                 <span className="flex gap-[10px]">
                     <button
-                        className="px-4 py-2 bg-gray-200 rounded"
+                        className="px-4 py-2 bg-gray-200 rounded max-[650px]:px-2 max-[650px]:py-1 max-[650px]:text-[12px]"
                         onClick={() => handlePageChange(currentPage - 1)}
                         disabled={currentPage === 1}
                     >
                         Previous
                     </button>
                     <button
-                        className="px-4 py-2 bg-gray-200 rounded"
+                        className="px-4 py-2 bg-gray-200 rounded max-[650px]:px-2 max-[650px]:py-1 max-[650px]:text-[12px]"
                         onClick={() => handlePageChange(currentPage + 1)}
                         disabled={currentPage === totalPages}
                     >

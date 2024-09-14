@@ -25,13 +25,13 @@ const AllUser = () => {
             <table>
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Account Balance</th>
-                        <th>Registered Date</th>
-                        <th>Status</th>
-                        <th>Actions</th>
+                        <th className='text-white font-light'>ID</th>
+                        <th className='text-white font-light'>Name</th>
+                        <th className='text-white font-light'>Email</th>
+                        <th className='text-white font-light'>Account Balance</th>
+                        <th className='text-white font-light'>Registered Date</th>
+                        <th className='text-white font-light'>Status</th>
+                        <th className='text-white font-light'>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
