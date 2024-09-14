@@ -152,7 +152,7 @@ const router = createHashRouter([
         ]
     },
     {
-        path: 'admin-login',
+        path: '/admin-login',
         element: <AdminLoginPage />
     },
     {
