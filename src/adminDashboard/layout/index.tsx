@@ -39,23 +39,26 @@ const Layout = () => {
     const firstName = data?.data?.data?.first_name
     return (
         <div className="w-full h-full">
-            <div className="w-[100%] h-[10%] shadow-lg  p-[10px] flex items-center max-[650px]:w-[100%]">
-                <span className="w-[30%] max-[650px]:w-[50%]">
+            <div className="w-[100%] h-[10%] shadow-lg  p-[10px] flex items-center max-[650px]:w-[100%] justify-between">
+                <span className="w-[30%] max-[650px]:w-[40%]">
                     <HiMenuAlt2 className=" text-[30px] hidden max-[650px]:flex" onClick={() => setShowSidebar(!showSideBar)} />
                 </span>
                 {
                     showSideBar && (
                         <div className="absolute flex top-0 left-0 bg-[#364a6358] h-[100vh] w-[100%] overflow-hidden z-[100] min-[768px]:hidden">
                             <div className="w-[80%] mb-[10px] h-full bg-[#111D29] p-[10px]">
-                                <DashLeftMain setIsOpen={setShowSidebar}/>
+                                <DashLeftMain setIsOpen={setShowSidebar} />
                             </div>
                             <div className="p-[10px] h-full w-[20%] flex justify-end  " onClick={() => setShowSidebar(!showSideBar)}>
-                                <FaTimes className="text-[20px]" onClick={() => setShowSidebar(!showSideBar)}/>
+                                <FaTimes className="text-[20px]" onClick={() => setShowSidebar(!showSideBar)} />
                             </div>
                         </div>
                     )
                 }
-                <span className="w-[100%] flex justify-end items-center max-[650px]:w-[80%] gap-2 sticky">
+                <span className="w-[30%] max-[650px]:w-[40%]">
+                    <p className="text-[25px] hidden max-[650px]:flex uppercase   ">Admin</p>
+                </span>
+                <span className="w-[100%] flex justify-end items-center max-[650px]:w-[40%] gap-2 sticky">
                     <ImUser className="text-[25px]" />
                     <p className="text-[18px]">{firstName}</p>
                 </span>

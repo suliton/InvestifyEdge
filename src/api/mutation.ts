@@ -17,7 +17,7 @@ export const adminLogin = async (data: AdminLoginInterface) => {
 };
 
 export const confirmTransaction = async (_id: string) =>{
-    return await axios.post(`${VITE_ENDPOINT_VERCEL}/confirm/${_id}`)
+    return await axios.post(`${VITE_ENDPOINT_RENDER}/confirm/${_id}`)
 }
 
 // user apis

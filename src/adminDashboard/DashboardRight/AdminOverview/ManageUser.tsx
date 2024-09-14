@@ -84,7 +84,7 @@ const ManageUser = () => {
   const { mutate: deleteUserMutate } = useMutation(["deleteUser"], deleteUser, {
     onSuccess: () => {
       toast.success('User deleted sccessfully')
-      navigate('/admin-dashboard/All-user')
+      navigate('/admin-dashboard/alluser')
     },
     onError: () => {
     }
@@ -136,11 +136,13 @@ const ManageUser = () => {
               zIndex: 2,
               display: 'flex',
               flexDirection: 'column',
-              gap: '10px',
-              textAlign: 'center'
-            }}>
+              gap: '20px',
+              textAlign: 'center',
+            }}
+            
+            className="max-[650px]:w-[100%]">
               <p style={{ fontSize: '18px' }}>Are you sure you want to delete this user?</p>
-              <div className="ManageUserDropDownButtons">
+              <div className="w-[100%] flex gap-[20px] justify-center">
                 <button onClick={confirmDelete}>Yes</button>
                 <button onClick={hideConfirmPopup}>No</button>
               </div>
