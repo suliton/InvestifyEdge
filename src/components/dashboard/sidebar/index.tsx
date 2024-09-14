@@ -23,8 +23,8 @@ const SideBar: React.FC<SideBarProps> = ({ setShowSidebar }) => {
     const handleNavigation = (path: string) => {
         navigate(path);
         if (setShowSidebar) {
-            setShowSidebar(false); 
-        }  
+            setShowSidebar(false);
+        }
     };
 
     return (
@@ -60,7 +60,7 @@ const SideBar: React.FC<SideBarProps> = ({ setShowSidebar }) => {
                     </div>
                     <div className="w-full h-[80%] flex flex-col items-center gap-[25px]">
                         <p className="w-[90%] text-[13px] text-white">SETTINGS</p>
-                        <span className="flex items-center gap-2 w-[90%] text-[#6e82a5] cursor-pointer hover:text-white" onClick={() => handleNavigation('/dashboard')}>
+                        <span className="flex items-center gap-2 w-[90%] text-[#6e82a5] cursor-pointer hover:text-white" onClick={() => handleNavigation('/dashboard/user-profile')}>
                             <FaUser />
                             <p>Profile</p>
                         </span>

@@ -22,8 +22,8 @@ const DepositHistory = () => {
 
     useEffect(() => {
         if (data?.data?.data) {
-            // const reversedData = data?.data?.data?.reverse();
-            setAllTransaction(data?.data?.data);
+            const reversedData = data?.data?.data?.reverse();
+            setAllTransaction(reversedData);
         }
     }, [data]);
 

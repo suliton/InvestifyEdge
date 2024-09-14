@@ -30,6 +30,7 @@ import AdminOverview from "./adminDashboard/DashboardRight/AdminOverview";
 import AllUser from "./adminDashboard/DashboardRight/AdminOverview/AllUser";
 import AdminTransactionHistory from "./adminDashboard/DashboardRight/Transaction";
 import ManageUser from "./adminDashboard/DashboardRight/AdminOverview/ManageUser";
+import UpdateUserProfile from "./components/dashboard/layout/updateUser";
 
 const router = createHashRouter([
     {
@@ -150,6 +151,10 @@ const router = createHashRouter([
                 path: '/dashboard/withdraw-history',
                 element: <WithdrawHistory />
             },
+            {
+                path: '/dashboard/user-profile',
+                element: <UpdateUserProfile/>
+            }
         ]
     },
     {
@@ -175,7 +180,7 @@ const router = createHashRouter([
             {
                 path: '/admin-dashboard/manage-user/:id',
                 element : <ManageUser/>
-            }
+            },
         ]
     }
 ]);

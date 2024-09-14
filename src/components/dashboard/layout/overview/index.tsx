@@ -23,7 +23,7 @@ const Overview = () => {
     const total_balance = data?.data?.data?.total_balance || 0;
     const withdrawable_balance = data?.data?.data?.withdrawable_balance || 0;
     const total_invest = data?.data?.data?.total_invest || 0;
-
+    const total_withdrawal = data?.data?.data?.total_withdrawal || 0
     return (
         <div className="w-full h-[100%]  flex flex-col items-center overflow-auto">
             <div className="mt-[20px] w-[95%]">
@@ -50,6 +50,15 @@ const Overview = () => {
                 </div>
             </div>
             <div className="w-[95%] flex flex-wrap  gap-[10px] justify-center mb-[20px]">
+                <div className="w-[49%] h-[120px] bg-white  rounded-[5px] max-[650px]:w-[45%] max-[500px]:w-[100%]">
+                    <span className="w-[45%] ml-[10px] h-[100%] flex flex-col justify-center">
+                        <p className="text-[16px] font-semibold text-[#364a63]">Accumulated Interest</p>
+                        <p className="text-[32px] font-medium text-[#364a63]">${total_balance}</p>
+                    </span>
+                    <span className="w-[40%]">
+
+                    </span>
+                </div>
                 <div className="w-[49%] h-[120px] bg-white flex rounded-[5px] p-[10px] max-[650px]:w-[45%] max-[500px]:w-[100%]">
                     <span className="w-[45%] ml-[10px] h-[100%] flex flex-col justify-center">
                         <p className="text-[16px] font-semibold text-[#364a63]">Account Balance</p>
@@ -71,16 +80,7 @@ const Overview = () => {
                 <div className="w-[49%] h-[120px] bg-white  rounded-[5px] max-[650px]:w-[45%] max-[500px]:w-[100%]">
                     <span className="w-[45%] ml-[10px] h-[100%] flex flex-col justify-center">
                         <p className="text-[16px] font-semibold text-[#364a63]">Total Withdrawals</p>
-                        <p className="text-[32px] font-medium text-[#364a63]">$0</p>
-                    </span>
-                    <span className="w-[40%]">
-
-                    </span>
-                </div>
-                <div className="w-[49%] h-[120px] bg-white  rounded-[5px] max-[650px]:w-[45%] max-[500px]:w-[100%]">
-                    <span className="w-[45%] ml-[10px] h-[100%] flex flex-col justify-center">
-                        <p className="text-[16px] font-semibold text-[#364a63]">Accumulated Interest</p>
-                        <p className="text-[32px] font-medium text-[#364a63]">${total_balance}</p>
+                        <p className="text-[32px] font-medium text-[#364a63]">${total_withdrawal}</p>
                     </span>
                     <span className="w-[40%]">
 
