@@ -90,7 +90,7 @@ export const updateUser = async (userData: {
   }) => {
     const { first_name, last_name, total_balance, total_invest, withdrawable_balance, id } = userData;
     try {
-      const response = await axios.patch(`${VITE_ENDPOINT_VERCEL}/user/${id}`, {
+      const response = await axios.patch(`${VITE_ENDPOINT_VERCEL}/users/${id}`, {
         first_name,
         last_name,
         total_balance,

@@ -18,7 +18,6 @@ const DepositHistory = () => {
       ];
 
     const { data, isLoading, isError } = useQuery(['getDepositsHistory'], getDepositsHistory, {
-        refetchInterval: 5000,
     });
 
     useEffect(() => {
@@ -40,9 +39,7 @@ const DepositHistory = () => {
         "Amount": transaction.investment?.amount || "N/A",
         "Payment Method": transaction.payment_method,
         "Status": transaction.status,
-        "Date": transaction.investment
-        ? new Date(transaction.createdAt).toLocaleDateString()
-        : "N/A",
+        "Date": new Date(transaction.createdAt).toLocaleDateString()
     }));
 
     return (
@@ -56,7 +53,7 @@ const DepositHistory = () => {
                 <p className="w-[60%] leading-normal text-[#8492A6] max-[650px]:w-[100%]">
                     View your InvestifyEdge Deposit history here
                 </p>
-                <Table columns={columns} data={formattedData} />
+                <Table columns={columns} data={formattedData} rowsPerPage={5}/>
             </div>
         </div>
     );
