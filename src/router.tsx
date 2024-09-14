@@ -24,6 +24,12 @@ import UpdatePassword from "./components/dashboard/layout/updatePassword";
 import GateWay from "./components/dashboard/layout/gateWay";
 import DepositHistory from "./components/dashboard/layout/deposit/deposits/history";
 import WithdrawHistory from "./components/dashboard/layout/withdraw/withdrawHistory";
+import AdminLoginPage from "./components/auth/admin";
+import AdminDashboard from "./adminDashboard";
+import AdminOverview from "./adminDashboard/DashboardRight/AdminOverview";
+import AllUser from "./adminDashboard/DashboardRight/AdminOverview/AllUser";
+import AdminTransactionHistory from "./adminDashboard/DashboardRight/Transaction";
+
 const router = createHashRouter([
     {
         path: '/',
@@ -142,6 +148,28 @@ const router = createHashRouter([
             {
                 path: '/dashboard/withdraw-history',
                 element: <WithdrawHistory />
+            },
+        ]
+    },
+    {
+        path: 'admin-login',
+        element: <AdminLoginPage />
+    },
+    {
+        path: 'admin-dashboard',
+        element: <AdminDashboard/>,
+        children: [
+            {
+                path: '',
+                element: <AdminOverview/>
+            },
+            {
+                path: '/admin-dashboard/alltransaction',
+                element: <AdminTransactionHistory/>
+            },
+            {
+                path: '/admin-dashboard/alluser',
+                element: <AllUser/>
             },
         ]
     }

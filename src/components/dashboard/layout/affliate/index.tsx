@@ -22,7 +22,7 @@ const Affliate = () => {
 
   useEffect(() => {
     if (data?.data?.data) {
-      // Transform the fetched data into the required format
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const formattedData = data.data.data.map((referral: any) => ({
         "Client Name": `${referral.first_name} ${referral.last_name}`,
         "Ref Code": "Level 1",

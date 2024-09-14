@@ -26,6 +26,7 @@ export interface UsersIgnupInterface {
 export interface IErrorResponse {
     message: string;
     response: {
+        status: number;
         data: {
             error: {
                 message: string
@@ -41,7 +42,8 @@ export interface IResponseData {
             token: string
         }
         ststus: string;
-        message: string
+        message: string;
+        token: string
     }
 }
 
@@ -78,3 +80,30 @@ export interface PaymentMethod {
     updatedAt: string;
   };
   
+  export interface IAllUser {
+    total_balance: number,
+    total_invest: number,
+    withdrawable_balance: number,
+    _id: string,
+    first_name: string,
+    last_name: string,
+    email: string,
+    amount: 0,
+    createdAt: string,
+    updatedAt: string
+  
+  }
+  export interface IAllTransaction {
+    _id: string;
+    user_id: string;
+    total_balance: number;
+    withdrawable_balance: number;
+    payment_method: string;
+    processed: boolean;
+    wallet_address: string;
+    status: string;
+    payment_proof: string;
+    payment_proof_url: string;
+    createdAt: string;
+    updatedAt: string;
+}
