@@ -36,12 +36,10 @@ const WithdrawHistory = () => {
     }
 
     const formattedData = allTransaction.map(transaction => ({
-        "Amount": transaction.investment?.amount || "N/A",
-        "Payment Method": transaction.payment_method,
+        "Amount": transaction?.amount || "N/A",
+        "Payment Method": transaction?.payment_method,
         "Status": transaction.status,
-        "Date": transaction.investment
-        ? new Date(transaction.createdAt).toLocaleDateString()
-        : "N/A",
+        "Date": new Date(transaction?.createdAt).toLocaleDateString()
     }));
 
     return (

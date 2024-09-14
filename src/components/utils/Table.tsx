@@ -4,7 +4,8 @@ interface TableProps<T> {
     columns: Array<keyof T>;
     data: T[];
     emptyMessage?: string;
-    rowsPerPage?: number; // Optional prop for rows per page
+    rowsPerPage?: number;
+    onRowClick?: (row: T) => void;  // Row is of type T
 }
 
 const Table = <T extends object>({
@@ -12,33 +13,29 @@ const Table = <T extends object>({
     data,
     emptyMessage = "No data available",
     rowsPerPage = 10,
+    onRowClick,
 }: TableProps<T>) => {
     const [currentPage, setCurrentPage] = useState(1);
     const [searchQuery, setSearchQuery] = useState("");
 
-    // Handle search input change
     const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSearchQuery(event.target.value);
         setCurrentPage(1); // Reset to first page on search
     };
 
-    // Filter data based on search query
     const filteredData = data.filter(row =>
         columns.some(column =>
             String(row[column]).toLowerCase().includes(searchQuery.toLowerCase())
         )
     );
 
-    // Calculate total pages
     const totalPages = Math.ceil(filteredData.length / rowsPerPage);
 
-    // Get current page data
     const currentData = filteredData.slice(
         (currentPage - 1) * rowsPerPage,
         currentPage * rowsPerPage
     );
 
-    // Handle page change
     const handlePageChange = (page: number) => {
         if (page > 0 && page <= totalPages) {
             setCurrentPage(page);
@@ -64,7 +61,7 @@ const Table = <T extends object>({
                             {columns.map((column) => (
                                 <th
                                     key={String(column)}
-                                    className="px-4 py-2 border-b-2 border-gray-300 text-left text-sm font-semibold text-white"
+                                    className="px-4 py-2 border-b-2 border-gray-300 text-left text-sm font-semibold text-black"
                                 >
                                     {String(column)}
                                 </th>
@@ -76,12 +73,14 @@ const Table = <T extends object>({
                             currentData.map((row, rowIndex) => (
                                 <tr
                                     key={rowIndex}
-                                    className="bg-white border-b last:border-0 hover:bg-gray-100"
+                                    className="bg-white border-b last:border-0 hover:bg-gray-100 cursor-pointer"
+                                    onClick={() => onRowClick?.(row)}  // Ensure row is of type T
                                 >
                                     {columns.map((column) => (
                                         <td
                                             key={String(column)}
                                             className="px-4 py-2 text-sm"
+                                            data-label={String(column)}
                                         >
                                             {String(row[column])}
                                         </td>

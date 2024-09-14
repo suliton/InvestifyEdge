@@ -60,6 +60,7 @@ export interface PaymentMethod {
   }
 
   export interface ITransaction  {
+    amount: string;
     investment: {
       selected_plan: string | null;
       interest_percentage: number;
