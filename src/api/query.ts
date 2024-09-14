@@ -1,4 +1,5 @@
 import axios, { AxiosResponse } from "axios";
+import { ApiResponse} from "../interface";
 
 const { VITE_ENDPOINT_VERCEL } = import.meta.env;
 const { VITE_TOKEN_CLIENT } = import.meta.env;
@@ -72,7 +73,7 @@ export const getAllPendingDeposit = async () => {
     )
 }
 
-export const getOneUser = async (id: string | undefined): Promise<AxiosResponse<unknown>> => {
+export const getOneUser = async (id: string | undefined): Promise<AxiosResponse<ApiResponse>> => {
     const admintoken = localStorage.getItem(VITE_TOKEN_ADMIN)
     return await axios.get(`${VITE_ENDPOINT_VERCEL}/admin/users/${id}`, {
         headers: {

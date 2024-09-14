@@ -107,3 +107,17 @@ export interface PaymentMethod {
     createdAt: string;
     updatedAt: string;
 }
+export interface IUser {
+    first_name: string;
+    last_name: string;
+    email: string;
+    status: string;
+    withdrawable_balance: number;
+    total_balance: number;
+    total_invest: number;
+    createdAt: string;
+  }
+
+  export interface ApiResponse {
+    data: IUser;
+  }

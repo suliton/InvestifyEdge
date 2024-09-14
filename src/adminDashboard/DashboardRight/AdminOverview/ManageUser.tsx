@@ -5,7 +5,19 @@ import './ManageUser.css';
 import { useState, useEffect } from "react";
 import { updateUser, deleteUser } from "../../../api/mutation";
 import toast from "react-hot-toast";
-import { IErrorResponse } from "../../../onboarding/login";
+import { IErrorResponse } from "../../../interface";
+
+export interface ApiResponseUser {
+  first_name: string;
+  last_name: string;
+  email: string;
+  status: string;
+  withdrawable_balance: number;
+  total_balance: number;
+  total_invest: number;
+  createdAt: string;
+}
+
 
 const ManageUser = () => {
   const { id } = useParams();
@@ -47,8 +59,7 @@ const ManageUser = () => {
       }
     }
   });
-  const user = data?.data?.data;
-
+  const user = data?.data?.data
 
   useEffect(() => {
     if (user) {
@@ -57,15 +68,15 @@ const ManageUser = () => {
         lastName: user.last_name || '',
         email: user.email || '',
         status: user.status || '',
-        withdrawableBalance: user.withdrawable_balance || '',
+        withdrawableBalance: user.withdrawable_balance?.toFixed(0) || '',
         totalBalance: user.total_balance?.toFixed(0) || '',
-        totalInvest: user.total_invest || '',
+        totalInvest: user.total_invest?.toFixed(0) || '',
         createdAt: new Date(user.createdAt).toLocaleDateString() || '',
       });
     }
   }, [user]);
 
-  const handleInputChange = (e: { target: { name: any; value: any } }) => {
+  const handleInputChange = (e: { target: { name: string; value: string } }) => {
     const { name, value } = e.target;
     setUserInfo((prev) => ({ ...prev, [name]: value }));
   };
@@ -106,8 +117,8 @@ const ManageUser = () => {
     <div className="ManageUserMain">
       <div className="ManageUserWrap">
         <div className="ManageUserBackButtonWrap">
-          <button onClick={() => navigate('/admin-dashboard/All-user')}>Back</button>
-          <button onClick={toggleDropdown} style={{ backgroundColor: 'transparent', border: '1px solid lightgrey' }}>Action</button>
+          <button onClick={() => navigate('/admin-dashboard/All-user')} style={{color: 'white'}} >Back</button>
+          <button onClick={toggleDropdown} style={{ backgroundColor: 'transparent', border: '1px solid lightgrey', color: 'black' }}>Action</button>
           {isDropdownVisible && (
             <div className="ManageUserActionButtonDropDown">
               <p onClick={showConfirmPopup} style={{ display: 'block', width: '100%', cursor: 'pointer' }}>Delete User</p>
@@ -144,7 +155,7 @@ const ManageUser = () => {
             </span>
             <span className="ManageUserAccountInfoInfo">
               <h4>Status</h4>
-              <p style={{ width: '60px', background: '#4caf50', borderRadius: '10px', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '20px' }}>Active</p>
+              <p style={{ width: '70px', background: '#182536', borderRadius: '10px', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '30px', color: "white", padding: '10px' }}>Active</p>
             </span>
           </div>
           <div className="ManageUserAccountInfoWrap">
@@ -217,7 +228,7 @@ const ManageUser = () => {
               <label>Registered Date</label>
               <input type="text" name="createdAt" value={userInfo.createdAt} onChange={handleInputChange} disabled />
             </div>
-            <button onClick={handleUpdateDetails}>{isLoading ? "Updating Details" : "Update Details"}</button>
+            <button style={{width: '80%'}} onClick={handleUpdateDetails}>{isLoading ? "Updating Details" : "Update Details"}</button>
           </div>
         </div>
       </div>

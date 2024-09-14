@@ -16,10 +16,10 @@ const AdminTransactionHistory = () => {
 
     const { data, isLoading, isError } = useQuery(['getAllAdminTransaction'], getAllAdminTransaction, {
         onError: (err: IErrorResponse) => {
-          if (err?.response?.status === 401) {
-            navigate('/admin-login')
-            toast.error(err?.response?.data?.message)
-          }
+            if (err?.response?.status === 401) {
+                navigate('/admin-login')
+                toast.error(err?.response?.data?.message)
+            }
         }
     });
 
@@ -75,7 +75,7 @@ const AdminTransactionHistory = () => {
                                 <td data-label="Date of Deposit">{new Date(transaction.createdAt).toLocaleDateString()}</td>
                                 <td data-label="Payment Method">{transaction.payment_method}</td>
                                 <td data-label="Actions">
-                                    <button onClick={() => handleConfirm(transaction._id)} disabled={transaction.status === 'completed'} style={{backgroundColor: '#4CAF50', padding: '5px'}}>
+                                    <button onClick={() => handleConfirm(transaction._id)} disabled={transaction.status === 'completed'} style={{ backgroundColor: '#182536', padding: '5px' }}>
                                         {transaction.status == 'completed' ? 'Payment Confirmed' : 'Confirm'}
                                     </button>
                                 </td>

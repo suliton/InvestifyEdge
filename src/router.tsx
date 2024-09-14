@@ -29,6 +29,7 @@ import AdminDashboard from "./adminDashboard";
 import AdminOverview from "./adminDashboard/DashboardRight/AdminOverview";
 import AllUser from "./adminDashboard/DashboardRight/AdminOverview/AllUser";
 import AdminTransactionHistory from "./adminDashboard/DashboardRight/Transaction";
+import ManageUser from "./adminDashboard/DashboardRight/AdminOverview/ManageUser";
 
 const router = createHashRouter([
     {
@@ -171,6 +172,10 @@ const router = createHashRouter([
                 path: '/admin-dashboard/alluser',
                 element: <AllUser/>
             },
+            {
+                path: '/admin-dashboard/manage-user/:id',
+                element : <ManageUser/>
+            }
         ]
     }
 ]);
