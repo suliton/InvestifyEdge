@@ -4,6 +4,8 @@
     margin: 20px;
     overflow-x: auto;
     height: 90%;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
   }
   
   table {

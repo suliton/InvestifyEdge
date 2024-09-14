@@ -7,7 +7,7 @@ import { useQuery } from "react-query"
 import { FaTimes } from "react-icons/fa"
 import DashLeftMain from "../DashboardLeft"
 import { getAdmin } from "../../api/query"
-const { VITE_TOKEN_CLIENT } = import.meta.env;
+const { VITE_TOKEN_ADMIN } = import.meta.env;
 
 const Layout = () => {
     const [showSideBar, setShowSidebar] = useState<boolean>(false)
@@ -27,8 +27,8 @@ const Layout = () => {
 
     const {
         data
-    } = useQuery(["getUser"], getAdmin, {
-        enabled: !!localStorage.getItem(VITE_TOKEN_CLIENT),
+    } = useQuery(["getAdmin"], getAdmin, {
+        enabled: !!localStorage.getItem(VITE_TOKEN_ADMIN),
         onSuccess: () => {
         },
         onError: () => {
