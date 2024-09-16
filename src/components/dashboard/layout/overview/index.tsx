@@ -4,10 +4,12 @@ import { IoCloudDownloadOutline, IoCloudUploadOutline } from "react-icons/io5";
 import TradingViewWidget from "./TrandingViewWiddget";
 import { useQuery } from "react-query";
 import { getUser } from "../../../../api/query";
+import { useState } from "react";
 const { VITE_TOKEN_CLIENT } = import.meta.env;
 
 const Overview = () => {
     const navigate = useNavigate()
+    const [copied, setCopied] = useState(false)
     const {
         data
     } = useQuery(["getUser"], getUser, {
@@ -24,6 +26,19 @@ const Overview = () => {
     const withdrawable_balance = data?.data?.data?.withdrawable_balance || 0;
     const total_invest = data?.data?.data?.total_invest || 0;
     const total_withdrawal = data?.data?.data?.total_withdrawal || 0
+
+    const referral_code = data?.data?.data?.referral_code
+
+    const referralLink = `https://investifyedge.com/${referral_code}`;
+
+    const copyToClipboard = () => {
+        navigator.clipboard.writeText(referralLink).then(() => {
+            setCopied(true);  // Show feedback after copying
+            setTimeout(() => setCopied(false), 3000);  // Reset after 3 seconds
+        }).catch(err => {
+            console.error("Failed to copy text: ", err);
+        });
+    };
     return (
         <div className="w-full h-[100%]  flex flex-col items-center overflow-auto">
             <div className="mt-[20px] w-[95%]">
@@ -96,10 +111,10 @@ const Overview = () => {
                 <TradingViewWidget />
             </div>
             <div className="w-[95%] mt-[30px] mb-[20px] flex flex-col gap-[10px]">
-                <p className="text-[20px] text-[#364a63] text-bold">
+                <p className="text-[20px] text-[#364a63] text-bold max-[650px]:text-[16px]">
                     Invite members to InvestifyEdge and earn more
                 </p>
-                <p>
+                < p className=" max-[650px]:text-[14px]">
                     Your unique link you can use to invite more members to join you on InvestifyEdge. Click the button below to copy.
                 </p>
                 <div className="w-full flex flex-col gap-2">
@@ -107,10 +122,15 @@ const Overview = () => {
                         Affiliate Link
                     </p>
                     <span className="w-[100%] h-[50px] border border-[lightgrey] flex items-center p-2 ">
-                        <p>https://investifyedge.com/lil</p>
+                        <p>{referralLink}</p>
                     </span>
                 </div>
-                <button className="w-[200px] bg-[#364a63] h-[40px] text-white rounded-[4px] ">Copy your affiliate link</button>
+                <button
+                    onClick={copyToClipboard}
+                    className="w-[200px] bg-[#364a63] h-[40px] text-white rounded-[4px] max-[650px]:w-[100%]"
+                >
+                    {copied ? "Copied!" : "Copy your affiliate link"}
+                </button>
             </div>
         </div>
     )

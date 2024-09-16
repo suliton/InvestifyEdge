@@ -122,7 +122,7 @@ const Crypto = () => {
                         <input
                             type="number"
                             placeholder="Enter Amount"
-                            className="w-[80%] h-[50px] border border-[lightgray] p-[10px] rounded-[6px] outline-none"
+                            className="w-[80%] h-[50px] border border-[lightgray] p-[10px] rounded-[6px] outline-none max-[650px]:w-[100%]"
                             value={amount}
                             onChange={(e) => setAmount(e.target.value)}
                         />

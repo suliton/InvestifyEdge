@@ -121,7 +121,7 @@ const RealEstate = () => {
                         <input
                             type="number"
                             placeholder="Enter Amount"
-                            className="w-[80%] h-[50px] border border-[lightgray] p-[10px] rounded-[6px] outline-none"
+                            className="w-[80%] h-[50px] border border-[lightgray] p-[10px] rounded-[6px] outline-none max-[650px]:w-[100%]"
                             value={amount}
                             onChange={(e) => setAmount(e.target.value)}
                         />
@@ -133,7 +133,7 @@ const RealEstate = () => {
                             {paymentMethods.map((method) => (
                                 <span
                                     key={method.name}
-                                    className={`w-[200px] h-[80px] flex items-center justify-center gap-[30px] bg-white shadow-lg rounded-[8px] cursor-pointer ${selectedMethod?.name === method.name ? 'border-2 border-green-500' : ''}`}
+                                    className={`w-[200px] h-[80px] max-[650px]:w-[100%] flex items-center justify-center gap-[30px] bg-white shadow-lg rounded-[8px] cursor-pointer ${selectedMethod?.name === method.name ? 'border-2 border-green-500' : ''}`}
                                     onClick={() => handlePaymentMethodClick(method)}
                                 >
                                     <p>{method.name}</p>
@@ -149,7 +149,7 @@ const RealEstate = () => {
 
                     <div className="w-[100%]">
                         <button
-                            className="w-[60%] h-[50px] text-white rounded-[8px] bg-[#6E00FF]"
+                            className="w-[60%] max-[650px]:w-[100%] h-[50px] text-white rounded-[8px] bg-[#6E00FF]"
                             onClick={handleProceedClick}
                         >
                             Proceed to Payment
