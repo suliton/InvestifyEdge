@@ -31,6 +31,9 @@ import AllUser from "./adminDashboard/DashboardRight/AdminOverview/AllUser";
 import AdminTransactionHistory from "./adminDashboard/DashboardRight/Transaction";
 import ManageUser from "./adminDashboard/DashboardRight/AdminOverview/ManageUser";
 import UpdateUserProfile from "./components/dashboard/layout/updateUser";
+import RealEstates from "./components/pages/services/RealEstate";
+import Retirement from "./components/pages/services/Retirement";
+import Gold from "./components/pages/services/Gold";
 
 const router = createHashRouter([
     {
@@ -72,6 +75,30 @@ const router = createHashRouter([
                         title="Google Map"
                     ></iframe>
                 </section>
+            </Layout>
+        ),
+    },
+    {
+        path: '/realestate',
+        element: (
+            <Layout>
+                <RealEstates />
+            </Layout>
+        ),
+    },
+    {
+        path: '/retirement',
+        element: (
+            <Layout>
+                <Retirement />
+            </Layout>
+        ),
+    },
+    {
+        path: '/gold',
+        element: (
+            <Layout>
+                <Gold />
             </Layout>
         ),
     },

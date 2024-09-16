@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 import bgImage from '../../../assets/bgimage.jpg'
+import Value from '../value';
 
 const CareerSection: React.FC = () => {
     return (
@@ -52,6 +53,7 @@ const CareerSection: React.FC = () => {
                     />
                 </div>
             </section>
+            <Value/>
         </>
 
     );

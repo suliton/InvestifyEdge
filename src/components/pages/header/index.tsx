@@ -63,8 +63,9 @@ const Header = () => {
               {isDropdownOpen && (
                 <div className="absolute left-0 mt-2 w-[200px] bg-white shadow-lg rounded-md">
                   <ul className="text-black" onMouseLeave={() => handleDropdownHover(false)}>
-                    <li className="px-4 py-2 hover:bg-[#364a63] hover:text-white cursor-pointer">Real Estate</li>
-                    <li className="px-4 py-2 hover:bg-[#364a63] hover:text-white cursor-pointer">Retirement</li>
+                    <li className="px-4 py-2 hover:bg-[#364a63] hover:text-white cursor-pointer" onClick={() => navigate('/realestate')}>Real Estate</li>
+                    <li className="px-4 py-2 hover:bg-[#364a63] hover:text-white cursor-pointer" onClick={() => navigate('/retirement')}>Retirement</li>
+                    <li className="px-4 py-2 hover:bg-[#364a63] hover:text-white cursor-pointer" onClick={() => navigate('/gold')}>Gold</li>
                     <li className="px-4 py-2 hover:bg-[#364a63] hover:text-white cursor-pointer">Cryptocurrency</li>
                     <li className="px-4 py-2 hover:bg-[#364a63] hover:text-white cursor-pointer">NFTs</li>
                     <li className="px-4 py-2 hover:bg-[#364a63] hover:text-white cursor-pointer">Stocks & ETFs</li>
