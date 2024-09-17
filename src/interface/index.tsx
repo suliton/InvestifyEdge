@@ -20,7 +20,7 @@ export interface UsersIgnupInterface {
     lastName: string,
     email: string,
     password: string,
-    referralCode: string
+    // referralCode: string
 }
 
 export interface IErrorResponse {

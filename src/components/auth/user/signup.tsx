@@ -14,7 +14,7 @@ const CreateAccount = () => {
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [referralCode, setReferralCode] = useState('');
+    // const [referralCode, setReferralCode] = useState('');
     const [showPassword, setShowPassword] = useState(false);
 
     const { mutate, isLoading } = useMutation(userSignup, {
@@ -36,7 +36,7 @@ const CreateAccount = () => {
             lastName,
             email,
             password,
-            referralCode
+            // referralCode
         };
 
         mutate(userData);
@@ -98,7 +98,7 @@ const CreateAccount = () => {
                             {showPassword ? <FaEyeSlash /> : <FaEye />}
                         </span>
                     </span>
-                    <span className="w-[100%] flex flex-col gap-[10px]">
+                    {/* <span className="w-[100%] flex flex-col gap-[10px]">
                         <label>Referral Code</label>
                         <input
                             type="text"
@@ -107,7 +107,7 @@ const CreateAccount = () => {
                             placeholder="Referral Code"
                             className="w-[100%] h-[40px] p-[10px] border border-[lightgrey]  outline-none"
                         />
-                    </span>
+                    </span> */}
                     <span className="w-[100%] flex flex-col gap-[10px]">
                         <button
                             type="submit"
