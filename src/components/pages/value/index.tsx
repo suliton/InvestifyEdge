@@ -18,8 +18,8 @@ const rightVariant = {
 
 const Value = () => {
   return (
-    <div className="w-[100%] flex items-center justify-center bg-[#676F76] px-[100px] py-[100px]">
-      <div className="bg-[#354f5b8f] w-[90%]">
+    <div className="w-[100%] flex items-center justify-center bg-[#676F76] px-[100px] py-[100px] max-[650px]:w-[100%] max-[650px]:p-[0px]">
+      <div className="bg-[#354f5b8f] w-[90%] max-[650px]:w-[100%] ">
         <header className="p-6">
           <div className="container mx-auto text-white text-center">
             <h1 className="text-[14px] font-light">COMPANY VALUE</h1>
