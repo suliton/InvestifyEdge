@@ -14,7 +14,8 @@ const CreateAccount = () => {
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    // const [referralCode, setReferralCode] = useState('');
+    const [referralCode, setReferralCode] = useState('');
+    const [phoneNumber, setPhoneNumber] = useState('')
     const [showPassword, setShowPassword] = useState(false);
 
     const { mutate, isLoading } = useMutation(userSignup, {
@@ -36,16 +37,17 @@ const CreateAccount = () => {
             lastName,
             email,
             password,
-            // referralCode
+            referralCode,
+            phoneNumber
         };
 
         mutate(userData);
     };
 
     return (
-        <div className="w-full h-[100vh] flex items-center justify-center bg-[#364a63] overflow-scroll flex-col gap-[10px]">
-            <img src="/BigLogo.png" alt="" className='w-[250px] max-[650px]:w-[200px] max-[650px]:mt-[40px] max-[375px]:mt-[90px]' />
-            <div className="w-[40%] p-[20px] bg-white flex justify-center items-center flex-col max-[650px]:w-[100%] gap-4">
+        <div className="w-full h-[] flex items-center justify-center bg-[#364a63] overflow-scroll flex-col gap-[10px]">
+            <img src="/BigLogo.png" alt="" className='w-[250px] max-[650px]:w-[200px] mt-[20px]' />
+            <div className="w-[40%] p-[20px] bg-white flex justify-center items-center flex-col max-[650px]:w-[100%] gap-4 mb-[20px]">
 
                 <span className="w-[100%] flex flex-col gap-[10px]">
                     <p className="text-[26px]">Become a Member</p>
@@ -59,7 +61,7 @@ const CreateAccount = () => {
                             value={firstName}
                             onChange={(e) => setFirstName(e.target.value)}
                             placeholder="First Name"
-                            className="w-[100%] h-[40px] p-[10px] border border-[lightgrey]  outline-none"
+                            className="w-[100%] h-[40px] p-[10px] border border-[lightgrey]  outline-none text-[14px]"
                         />
                     </span>
                     <span className="w-[100%] flex flex-col gap-[10px]">
@@ -69,7 +71,7 @@ const CreateAccount = () => {
                             value={lastName}
                             onChange={(e) => setLastName(e.target.value)}
                             placeholder="Last Name"
-                            className="w-[100%] h-[40px] p-[10px] border border-[lightgrey]  outline-none"
+                            className="w-[100%] h-[40px] p-[10px] border border-[lightgrey]  outline-none text-[14px]"
                         />
                     </span>
                     <span className="w-[100%] flex flex-col gap-[10px]">
@@ -79,7 +81,17 @@ const CreateAccount = () => {
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             placeholder="Email"
-                            className="w-[100%] h-[40px] p-[10px] border border-[lightgrey]  outline-none"
+                            className="w-[100%] h-[40px] p-[10px] border border-[lightgrey]  outline-none text-[14px]"
+                        />
+                    </span>
+                    <span className="w-[100%] flex flex-col gap-[10px]">
+                        <label>Phone Number</label>
+                        <input
+                            type="text"
+                            value={phoneNumber}
+                            onChange={(e) => setPhoneNumber(e.target.value)}
+                            placeholder="Phone Number"
+                            className="w-[100%] h-[40px] p-[10px] border border-[lightgrey]  outline-none text-[14px]"
                         />
                     </span>
                     <span className="w-[100%] flex flex-col gap-[10px] relative">
@@ -89,7 +101,7 @@ const CreateAccount = () => {
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                             placeholder="Password"
-                            className="w-[100%] h-[40px] p-[10px] border border-[lightgrey] outline-none"
+                            className="w-[100%] h-[40px] p-[10px] border border-[lightgrey] outline-none text-[14px]"
                         />
                         <span
                             onClick={() => setShowPassword(!showPassword)}
@@ -98,16 +110,16 @@ const CreateAccount = () => {
                             {showPassword ? <FaEyeSlash /> : <FaEye />}
                         </span>
                     </span>
-                    {/* <span className="w-[100%] flex flex-col gap-[10px]">
+                    <span className="w-[100%] flex flex-col gap-[10px]">
                         <label>Referral Code</label>
                         <input
                             type="text"
                             value={referralCode}
                             onChange={(e) => setReferralCode(e.target.value)}
-                            placeholder="Referral Code"
-                            className="w-[100%] h-[40px] p-[10px] border border-[lightgrey]  outline-none"
+                            placeholder="(optional)"
+                            className="w-[100%] h-[40px] p-[10px] border border-[lightgrey]  outline-none text-[14px]"
                         />
-                    </span> */}
+                    </span>
                     <span className="w-[100%] flex flex-col gap-[10px]">
                         <button
                             type="submit"
