@@ -104,8 +104,9 @@ const Header = () => {
 
             {isSidebarServiceOpen && (
               <div className="ml-4 mt-2 flex flex-col gap-[15px] text-[12px]">
-                <p className="mb-2 cursor-pointer hover:text-[#364a63]">Real Estate</p>
-                <p className="mb-2 cursor-pointer hover:text-[#364a63]">Retirement</p>
+                <p className="mb-2 cursor-pointer hover:text-[#364a63]" onClick={() => navigate('/realestate')}>Real Estate</p>
+                <p className="mb-2 cursor-pointer hover:text-[#364a63]" onClick={() => navigate('/retirement')}>Retirement</p>
+                <p className="mb-2 cursor-pointer hover:text-[#364a63]" onClick={() => navigate('/gold')}>Gold</p>
                 <p className="mb-2 cursor-pointer hover:text-[#364a63]">Cryptocurrency</p>
                 <p className="mb-2 cursor-pointer hover:text-[#364a63]">NFTs</p>
                 <p className="mb-2 cursor-pointer hover:text-[#364a63]">Stocks & ETFs</p>
