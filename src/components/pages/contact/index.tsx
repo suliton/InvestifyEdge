@@ -51,7 +51,7 @@ const Contact: React.FC = () => {
                             </span>
                             <span className="material-icons text-lg mr-2">
                                 <p className='text-[20px] font-semibold'>Email Us:</p>
-                                <p>investifyEgde@gmail.com</p>
+                                <p>theInvestifyEdge@gmail.com</p>
                             </span>                            
                         </div>
                     </div>
