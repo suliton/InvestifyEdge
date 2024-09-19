@@ -211,7 +211,7 @@ const ManageUser = () => {
               <input type="text" name="email" value={userInfo.email} onChange={handleInputChange} />
             </div>
             <div className="ManageUserInputSingleWrap">
-              <label>Withdrawable Balance</label>
+              <label>Account Balance</label>
               <input type="text" name="withdrawableBalance" value={userInfo.withdrawableBalance} onChange={handleInputChange} />
             </div>
           </div>
