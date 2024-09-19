@@ -62,6 +62,7 @@ const CreateAccount = () => {
                             onChange={(e) => setFirstName(e.target.value)}
                             placeholder="First Name"
                             className="w-[100%] h-[40px] p-[10px] border border-[lightgrey]  outline-none text-[14px]"
+                            required
                         />
                     </span>
                     <span className="w-[100%] flex flex-col gap-[10px]">
@@ -72,6 +73,7 @@ const CreateAccount = () => {
                             onChange={(e) => setLastName(e.target.value)}
                             placeholder="Last Name"
                             className="w-[100%] h-[40px] p-[10px] border border-[lightgrey]  outline-none text-[14px]"
+                            required
                         />
                     </span>
                     <span className="w-[100%] flex flex-col gap-[10px]">
@@ -82,6 +84,7 @@ const CreateAccount = () => {
                             onChange={(e) => setEmail(e.target.value)}
                             placeholder="Email"
                             className="w-[100%] h-[40px] p-[10px] border border-[lightgrey]  outline-none text-[14px]"
+                            required
                         />
                     </span>
                     <span className="w-[100%] flex flex-col gap-[10px]">
@@ -92,6 +95,7 @@ const CreateAccount = () => {
                             onChange={(e) => setPhoneNumber(e.target.value)}
                             placeholder="Phone Number"
                             className="w-[100%] h-[40px] p-[10px] border border-[lightgrey]  outline-none text-[14px]"
+                            required
                         />
                     </span>
                     <span className="w-[100%] flex flex-col gap-[10px] relative">
