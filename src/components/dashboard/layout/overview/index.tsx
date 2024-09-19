@@ -65,15 +65,6 @@ const Overview = () => {
                 </div>
             </div>
             <div className="w-[95%] flex flex-wrap  gap-[10px] justify-center mb-[20px]">
-                <div className="w-[49%] h-[120px] bg-white  rounded-[5px] max-[650px]:w-[45%] max-[500px]:w-[100%]">
-                    <span className="w-[45%] ml-[10px] h-[100%] flex flex-col justify-center">
-                        <p className="text-[16px] font-semibold text-[#364a63]">Accumulated Interest</p>
-                        <p className="text-[32px] font-medium text-[#364a63]">${total_balance}</p>
-                    </span>
-                    <span className="w-[40%]">
-
-                    </span>
-                </div>
                 <div className="w-[49%] h-[120px] bg-white flex rounded-[5px] p-[10px] max-[650px]:w-[45%] max-[500px]:w-[100%]">
                     <span className="w-[45%] ml-[10px] h-[100%] flex flex-col justify-center">
                         <p className="text-[16px] font-semibold text-[#364a63]">Account Balance</p>
@@ -101,7 +92,15 @@ const Overview = () => {
 
                     </span>
                 </div>
+                <div className="w-[49%] h-[120px] bg-white  rounded-[5px] max-[650px]:w-[45%] max-[500px]:w-[100%]">
+                    <span className="w-[45%] ml-[10px] h-[100%] flex flex-col justify-center">
+                        <p className="text-[16px] font-semibold text-[#364a63]">Accumulated Interest</p>
+                        <p className="text-[32px] font-medium text-[#364a63]">${total_balance}</p>
+                    </span>
+                    <span className="w-[40%]">
 
+                    </span>
+                </div>
             </div>
             <div className="w-[95%] flex gap-[20px] flex-col items-center justify-center bg-white p-[10px]">
                 <span className="w-[95%]">
