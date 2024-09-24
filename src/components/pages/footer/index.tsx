@@ -20,12 +20,12 @@ const Footer: React.FC = () => {
                     <div>
                         <h4 className="font-bold mb-2">Company</h4>
                         <ul className='flex flex-col gap-[15px] text-[14px]'>
-                            <li><a href="#" className="hover:text-gray-400" onClick={() => navigate('/')}>Home</a></li>
-                            <li><a href="#" className="hover:text-gray-400" onClick={() => navigate('/company')}>About Us</a></li>
-                            <li><a href="#" className="hover:text-gray-400" onClick={() => navigate('/career')}>Career</a></li>
-                            <li><a href="#" className="hover:text-gray-400" onClick={() => navigate('/login')}>Client Portal</a></li>
-                            <li><a href="#" className="hover:text-gray-400" onClick={() => navigate('/signup')}>Start Membership</a></li>
-                            <li><a href="#" className="hover:text-gray-400" onClick={() => navigate('/contact')}>Contact Us</a></li>
+                            <li><a  className="hover:text-gray-400" onClick={() => navigate('/')}>Home</a></li>
+                            <li><a  className="hover:text-gray-400" onClick={() => navigate('/company')}>About Us</a></li>
+                            <li><a  className="hover:text-gray-400" onClick={() => navigate('/career')}>Career</a></li>
+                            <li><a  className="hover:text-gray-400" onClick={() => navigate('/login')}>Client Portal</a></li>
+                            <li><a  className="hover:text-gray-400" onClick={() => navigate('/signup')}>Start Membership</a></li>
+                            <li><a  className="hover:text-gray-400" onClick={() => navigate('/contact')}>Contact Us</a></li>
                         </ul>
                     </div>
 
@@ -33,12 +33,13 @@ const Footer: React.FC = () => {
                     <div>
                         <h4 className="font-bold mb-2">Services</h4>
                         <ul className='flex flex-col gap-[15px] text-[14px] '>
-                            <li><a href="#" className="hover:text-gray-400">Real Estate</a></li>
-                            <li><a href="#" className="hover:text-gray-400">Retirement</a></li>
-                            <li><a href="#" className="hover:text-gray-400">Cryptocurrency</a></li>
-                            <li><a href="#" className="hover:text-gray-400">NFTs</a></li>
-                            <li><a href="#" className="hover:text-gray-400">Stocks & ETFs</a></li>
-                            <li><a href="#" className="hover:text-gray-400">Foreign Exchange</a></li>
+                            <li><a  className="hover:text-gray-400" onClick={() => navigate('/realestate')}>Real Estate</a></li>
+                            <li><a  className="hover:text-gray-400" onClick={() => navigate('/retirement')}>Retirement</a></li>
+                            <li><a  className="hover:text-gray-400" onClick={() => navigate('/gold')}>Gold</a></li>
+                            <li><a  className="hover:text-gray-400" onClick={() => navigate('/crypto')}>Cryptocurrency</a></li>
+                            <li><a  className="hover:text-gray-400" onClick={() => navigate('/nfts')}>NFTs</a></li>
+                            <li><a  className="hover:text-gray-400" onClick={() => navigate('/stocks')}>Stocks & ETFs</a></li>
+                            <li><a  className="hover:text-gray-400" onClick={() => navigate('/forex')}>Foreign Exchange</a></li>
                         </ul>
                     </div>
 
@@ -46,12 +47,12 @@ const Footer: React.FC = () => {
                     <div>
                         <h4 className="font-bold mb-2">Legal</h4>
                         <ul className='flex flex-col gap-[15px] text-[14px]'>
-                            <li><a href="#" className="hover:text-gray-400">Risk Disclosure</a></li>
-                            <li><a href="#" className="hover:text-gray-400">Anti Spam Policy</a></li>
-                            <li><a href="#" className="hover:text-gray-400">Anti Money Laundering</a></li>
-                            <li><a href="#" className="hover:text-gray-400">Placement of Statement</a></li>
-                            <li><a href="#" className="hover:text-gray-400">Privacy Policy</a></li>
-                            <li><a href="#" className="hover:text-gray-400">Terms of Use</a></li>
+                            <li><a  className="hover:text-gray-400">Risk Disclosure</a></li>
+                            <li><a  className="hover:text-gray-400">Anti Spam Policy</a></li>
+                            <li><a  className="hover:text-gray-400">Anti Money Laundering</a></li>
+                            <li><a  className="hover:text-gray-400">Placement of Statement</a></li>
+                            <li><a  className="hover:text-gray-400">Privacy Policy</a></li>
+                            <li><a  className="hover:text-gray-400">Terms of Use</a></li>
                         </ul>
                     </div>
                 </div>

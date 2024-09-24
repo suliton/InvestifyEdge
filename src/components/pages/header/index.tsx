@@ -66,10 +66,10 @@ const Header = () => {
                     <li className="px-4 py-2 hover:bg-[#364a63] hover:text-white cursor-pointer" onClick={() => navigate('/realestate')}>Real Estate</li>
                     <li className="px-4 py-2 hover:bg-[#364a63] hover:text-white cursor-pointer" onClick={() => navigate('/retirement')}>Retirement</li>
                     <li className="px-4 py-2 hover:bg-[#364a63] hover:text-white cursor-pointer" onClick={() => navigate('/gold')}>Gold</li>
-                    <li className="px-4 py-2 hover:bg-[#364a63] hover:text-white cursor-pointer">Cryptocurrency</li>
-                    <li className="px-4 py-2 hover:bg-[#364a63] hover:text-white cursor-pointer">NFTs</li>
-                    <li className="px-4 py-2 hover:bg-[#364a63] hover:text-white cursor-pointer">Stocks & ETFs</li>
-                    <li className="px-4 py-2 hover:bg-[#364a63] hover:text-white cursor-pointer">Foreign Exchange</li>
+                    <li className="px-4 py-2 hover:bg-[#364a63] hover:text-white cursor-pointer" onClick={() => navigate('/crypto')}>Cryptocurrency</li>
+                    <li className="px-4 py-2 hover:bg-[#364a63] hover:text-white cursor-pointer" onClick={() => navigate('/nfts')}>NFTs</li>
+                    <li className="px-4 py-2 hover:bg-[#364a63] hover:text-white cursor-pointer" onClick={() => navigate('/stocks')}>Stocks & ETFs</li>
+                    <li className="px-4 py-2 hover:bg-[#364a63] hover:text-white cursor-pointer" onClick={() => navigate('/forex')}>Foreign Exchange</li>
                   </ul>
                 </div>
               )}
@@ -107,10 +107,10 @@ const Header = () => {
                 <p className="mb-2 cursor-pointer hover:text-[#364a63]" onClick={() => navigate('/realestate')}>Real Estate</p>
                 <p className="mb-2 cursor-pointer hover:text-[#364a63]" onClick={() => navigate('/retirement')}>Retirement</p>
                 <p className="mb-2 cursor-pointer hover:text-[#364a63]" onClick={() => navigate('/gold')}>Gold</p>
-                <p className="mb-2 cursor-pointer hover:text-[#364a63]">Cryptocurrency</p>
-                <p className="mb-2 cursor-pointer hover:text-[#364a63]">NFTs</p>
-                <p className="mb-2 cursor-pointer hover:text-[#364a63]">Stocks & ETFs</p>
-                <p className="mb-2 cursor-pointer hover:text-[#364a63]">Foreign Exchange</p>
+                <p className="mb-2 cursor-pointer hover:text-[#364a63]" onClick={() => navigate('/crypto')}>Cryptocurrency</p>
+                <p className="mb-2 cursor-pointer hover:text-[#364a63]" onClick={() => navigate('/nfts')}>NFTs</p>
+                <p className="mb-2 cursor-pointer hover:text-[#364a63]" onClick={() => navigate('/stocks')}>Stocks & ETFs</p>
+                <p className="mb-2 cursor-pointer hover:text-[#364a63]" onClick={() => navigate('/forex')}>Foreign Exchange</p>
               </div>
             )}
           </div>

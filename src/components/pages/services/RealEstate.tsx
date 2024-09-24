@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import bgImage from '../../../assets/bgimage.jpg'
 import Value from '../value';
 import { useNavigate } from 'react-router-dom';
 
@@ -7,18 +6,35 @@ const RealEstates = () => {
     const navigate = useNavigate()
     return (
         <>
-            <div className="w-full h-[100vh] max-[650px]:w-[100%]  bg-cover bg-center bg-no-repeat relative flex justify-center items-center " style={{ backgroundImage: `url(${bgImage})` }}>
+            <div className="w-full h-[100vh] max-[650px]:w-[100%] relative flex justify-center items-center">
+                {/* Video Background */}
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="absolute inset-0 w-full h-full object-cover"
+                >
+                    <source src="/video11.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+
+                {/* Overlay */}
                 <div className="absolute inset-0 bg-[#0000007b]"></div>
+
                 <motion.div
                     initial={{ y: 100, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.8 }}
-                    className="w-[60%] bg-[#364a637b] p-[80px] flex flex-col items-center justify-center rounded-[10px] relative max-[650px]:w-[100%]">
+                    className="w-[60%] bg-[#364a637b] p-[80px] flex flex-col items-center justify-center rounded-[10px] relative max-[650px]:w-[100%]"
+                >
                     <div className="w-[100%] flex items-center flex-col justify-center">
                         <h1 className="text-[60px] w-[90%] text-white font-bold max-w-[1000px] text-center max-[650px]:text-[40px] max-[650px]:w-full">
                             Real Estate
                         </h1>
-                        <p className='text-white text-center max-[650px]:w-full'>You can now invest in real estate and own physical properties with theinvestifyglobe</p>
+                        <p className='text-white text-center max-[650px]:w-full'>
+                            You can now invest in real estate and own physical properties with investifyEdge
+                        </p>
                     </div>
                 </motion.div>
             </div>
@@ -32,9 +48,9 @@ const RealEstates = () => {
                     </p>
                     <p className="text-[16px] mb-6">
 
-                        Real estate is an asset form with liquidity relative to other investments, it is also capital intensive and is highly cash flow dependent. If these factors are not well understood and managed by the investor, real estate becomes a risky investment. This is why investing with theinvestifyglobe is the best option, we don't only make real estate investment cost effective, every risk involved is also curtailed leaving you with guaranteed profits.
+                        Real estate is an asset form with liquidity relative to other investments, it is also capital intensive and is highly cash flow dependent. If these factors are not well understood and managed by the investor, real estate becomes a risky investment. This is why investing with investifyEdge is the best option, we don't only make real estate investment cost effective, every risk involved is also curtailed leaving you with guaranteed profits.
                     </p>
-                    <button className="bg-[#354f5b] text-white px-6 py-3 rounded-full transition duration-300" onClick={()=> navigate('/signup')}>
+                    <button className="bg-[#354f5b] text-white px-6 py-3 rounded-full transition duration-300" onClick={() => navigate('/signup')}>
                         Start Membership now
                     </button>
                 </div>

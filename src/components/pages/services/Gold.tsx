@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Retirement = () => {
     const navigate = useNavigate();
-    
+
     return (
         <>
             <div className="w-full h-[100vh] max-[650px]:w-[100%] relative flex justify-center items-center">
@@ -16,7 +16,7 @@ const Retirement = () => {
                     playsInline
                     className="absolute inset-0 w-full h-full object-cover"
                 >
-                    <source src="/cryptovideo.mp4" type="video/mp4" />
+                    <source src="/Gold.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
 
@@ -34,7 +34,7 @@ const Retirement = () => {
                             Gold
                         </h1>
                         <p className='text-white text-center max-[650px]:w-full'>
-                            The technicals and intensive capital required to begin an investment in Gold is no longer necessary with theinvestifyglobe.
+                            The technicals and intensive capital required to begin an investment in Gold is no longer necessary with investifyEdge.
                         </p>
                     </div>
                 </motion.div>
@@ -48,7 +48,7 @@ const Retirement = () => {
                         Of all the precious metals, gold is the most popular as an investment. Investors generally buy gold as a way of diversifying their portfolio, especially through the use of futures contracts and derivatives.
                     </p>
                     <p className="text-[16px] mb-6">
-                        The gold market is subject to speculation and volatility as are other markets. Compared to other precious metals used for investment, gold has been the most effective safe haven across a number of countries. Gold is a commodity that trades based on supply and demand. The interplay between supply and demand ultimately determines what the spot price of gold is at any given time. At theinvestifyglobe we guide you through the whole investment process from a beginner to an expert level.
+                        The gold market is subject to speculation and volatility as are other markets. Compared to other precious metals used for investment, gold has been the most effective safe haven across a number of countries. Gold is a commodity that trades based on supply and demand. The interplay between supply and demand ultimately determines what the spot price of gold is at any given time. At investifyEdge we guide you through the whole investment process from a beginner to an expert level.
                     </p>
                     <button
                         className="bg-[#354f5b] text-white px-6 py-3 rounded-full transition duration-300"

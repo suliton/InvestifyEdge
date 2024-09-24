@@ -34,6 +34,10 @@ import UpdateUserProfile from "./components/dashboard/layout/updateUser";
 import RealEstates from "./components/pages/services/RealEstate";
 import Retirement from "./components/pages/services/Retirement";
 import Gold from "./components/pages/services/Gold";
+import CryptoCurrency from "./components/pages/services/CryptoCurrency";
+import NFTs from "./components/pages/services/NFTs";
+import Stock from "./components/pages/services/Stock";
+import Forex from "./components/pages/services/Forex";
 
 const router = createHashRouter([
     {
@@ -99,6 +103,38 @@ const router = createHashRouter([
         element: (
             <Layout>
                 <Gold />
+            </Layout>
+        ),
+    },
+    {
+        path: '/crypto',
+        element: (
+            <Layout>
+                <CryptoCurrency />
+            </Layout>
+        ),
+    },
+    {
+        path: '/nfts',
+        element: (
+            <Layout>
+                <NFTs />
+            </Layout>
+        ),
+    },
+    {
+        path: '/stocks',
+        element: (
+            <Layout>
+                <Stock />
+            </Layout>
+        ),
+    },
+    {
+        path: '/forex',
+        element: (
+            <Layout>
+                <Forex />
             </Layout>
         ),
     },
